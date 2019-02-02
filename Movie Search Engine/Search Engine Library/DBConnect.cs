@@ -5,19 +5,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Linq;
 using System.Data.Linq.Mapping;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Search_Engine_Library
 {
-    class DBConnect
+    public class DBConnect
     {
-        public void Connect()
-        {
-            DataContext database = new DataContext(@"\Movie Search Engine\Search Engine Library\Database.mdf");
-            Table<Movie> Movies = database.GetTable<Movie>();
+        private SqlConnection conn;
+        public DBConnect() { }
 
-            IQueryable<Movie> movQuer =
-                from mov in Movies
-                select mov;
+        public void Disconnect()
+        {
+            conn.Close();
         }
+        public SqlConnection Connect()
+        {
+            conn = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = |DataDirectory|\Database.mdf; Integrated Security = True");
+            conn.Open();
+            Console.WriteLine("Connected");
+            return conn;
+        }
+
     }
 }
+

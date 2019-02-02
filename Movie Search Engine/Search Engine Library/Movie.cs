@@ -125,10 +125,7 @@ namespace Search_Engine_Library
             }
         }
 
-        public Movie (int id, string title, int price, DateTime releasedate, Genre genres, Language languages, string runtime)
-        {
-
-        }
+        public Movie (){}
 
         public bool Equals(Movie other)
         {
