@@ -3,14 +3,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Drawing;
+using System.IO;
+using System.Data.Linq;
+using System.Data.Linq.Mapping;
 namespace Search_Engine_Library
 {
-     public abstract class Account : IComparable<Account>, IEquatable<Account>
+    [Table(Name = "Account")]
+    public abstract class Account : IComparable<Account>, IEquatable<Account>
     {
+
         protected string login;
-        public string Login => login;
-        protected string password;
+        [Column(Name = "Login", Storage = "login", IsPrimaryKey = false)]
+        public string Login
+        {
+            get
+            {
+                return this.login;
+            }
+            set
+            {
+                this.login = value;
+            }
+        }
+        [Column(Name = "Password", Storage = "password", IsPrimaryKey = false)]
+        protected string password
+        {
+            set
+            {
+                this.password = value;
+            }
+        }
 
         public bool Equals(Account other)
         {
