@@ -15,7 +15,7 @@ namespace Search_Engine_Library
     {
         
         private int id;
-        [Column(Name = "MovieID", IsPrimaryKey = true)]
+        [Column(Name = "MovieID", Storage ="id", IsPrimaryKey = true)]
         public int Id
         {
             get
@@ -29,7 +29,7 @@ namespace Search_Engine_Library
         }
 
         private string title;
-        [Column(Name = "Title", CanBeNull = false)]
+        [Column(Name = "Title", Storage = "title", CanBeNull = false)]
         public string Title
         {
             get
@@ -43,7 +43,7 @@ namespace Search_Engine_Library
         }
         
         private int price;
-        [Column(Name = "Price", CanBeNull = true)]
+        [Column(Name = "Price", Storage = "price", CanBeNull = true)]
         public int Price
         {
             get
@@ -57,18 +57,73 @@ namespace Search_Engine_Library
         }
 
         private DateTime releasedate;
-        public DateTime Releasedate => releasedate;
+        [Column(Name = "ReleaseDate", Storage = "releasedate", CanBeNull = true)]
+        public DateTime Releasedate
+        {
+            get
+            {
+                return this.releasedate;
+            }
+            set
+            {
+                this.releasedate = value;
+            }
+        }
 
-        private Genre[] genres;
-        public Genre[] Genres => genres;
+        private Genre genre;
+        [Column(Name = "Genre", Storage = "genre", CanBeNull = true)]
+        public Genre Genre
+        {
+            get
+            {
+                return this.genre;
+            }
+            set
+            {
+                this.genre = value;
+            }
+        }
 
-        private Language[] languages;
-        public Language[] Languages => languages;
+        private Language language;
+        [Column(Name = "Language", Storage = "language", CanBeNull = true)]
+        public Language Language
+        {
+            get
+            {
+                return this.language;
+            }
+            set
+            {
+                this.language = value;
+            }
+        }
 
         private string runtime;
-        public string Runtime => runtime;
-
-        public Image poster;
+        [Column(Name = "Runtime", Storage = "runtime", CanBeNull = true)]
+        public string Runtime
+        {
+            get
+            {
+                return this.runtime;
+            }
+            set
+            {
+                this.runtime = value;
+            }
+        }
+        private Image poster;
+        [Column(Name = "Poster", Storage = "poster", CanBeNull = true)]
+        public Image Poster
+        {
+            get
+            {
+                return this.poster;
+            }
+            set
+            {
+                this.poster = value;
+            }
+        }
 
         public Movie (int id, string title, int price, DateTime releasedate, Genre[] genres, Language[] languages, string runtime)
         {
