@@ -94,5 +94,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Search Engine Library\Search Engine Library.csproj">
+      <Project>{39329d48-d08b-48dd-a61d-a5136ca80aea}</Project>
+      <Name>Search Engine Library</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

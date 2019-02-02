@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Search_Engine_Library
 {
-    public class Class1
+    class Administrator : Account
     {
+        protected Privilege privileges = Privilege.Admin;
     }
 }

@@ -55,6 +55,16 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Movie Search Engine\Movie Search Engine.csproj">
+      <Project>{7e74a6ed-86e6-43d0-92ea-445de0cfab71}</Project>
+      <Name>Movie Search Engine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Search Engine Library\Search Engine Library.csproj">
+      <Project>{39329d48-d08b-48dd-a61d-a5136ca80aea}</Project>
+      <Name>Search Engine Library</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
