@@ -3,31 +3,72 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
+using System.IO;
+using System.Data.Linq;
+using System.Data.Linq.Mapping;
 
 namespace Search_Engine_Library
 {
+    [Table(Name = "Movie")]
     public class Movie : IComparable<Movie>, IEquatable<Movie>
     {
-
-        private readonly int id;
-
-        private readonly string title;
-        public string Title => title;
         
-        private readonly int price;
-        public int Price => price;
+        private int id;
+        [Column(Name = "MovieID", IsPrimaryKey = true)]
+        public int Id
+        {
+            get
+            {
+                return this.id;
+            }
+            set
+            {
+                this.id = value;
+            }
+        }
 
-        private readonly DateTime releasedate;
+        private string title;
+        [Column(Name = "Title", CanBeNull = false)]
+        public string Title
+        {
+            get
+            {
+                return this.title;
+            }
+            set
+            {
+                this.title = value;
+            }
+        }
+        
+        private int price;
+        [Column(Name = "Price", CanBeNull = true)]
+        public int Price
+        {
+            get
+            {
+                return this.price;
+            }
+            set
+            {
+                this.price = value;
+            }
+        }
+
+        private DateTime releasedate;
         public DateTime Releasedate => releasedate;
 
-        private readonly Genre[] genres;
+        private Genre[] genres;
         public Genre[] Genres => genres;
 
-        private readonly Language[] languages;
+        private Language[] languages;
         public Language[] Languages => languages;
 
-        private readonly string runtime;
+        private string runtime;
         public string Runtime => runtime;
+
+        public Image poster;
 
         public Movie (int id, string title, int price, DateTime releasedate, Genre[] genres, Language[] languages, string runtime)
         {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Search_Engine_Library
 {
-    class Account : IComparable<Account>, IEquatable<Account>
+     public abstract class Account : IComparable<Account>, IEquatable<Account>
     {
         protected string login;
         public string Login => login;
