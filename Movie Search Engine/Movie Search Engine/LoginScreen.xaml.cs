@@ -22,6 +22,18 @@ namespace Movie_Search_Engine
     /// </summary>
     public partial class loginScreen : Window
     {
+
+        private void wnd_move_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (Mouse.LeftButton == MouseButtonState.Pressed)
+            {
+                this.DragMove();
+            }
+        }
+        private void btn_close_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
         public loginScreen()
         {
             InitializeComponent();
