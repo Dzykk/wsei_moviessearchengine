@@ -24,7 +24,7 @@
                 </Grid.RowDefinitions>
                 <Border>
                     <DockPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-                        <Image Source="images/126466-multimedia-collection/png/avatar.png" Width="16"/>
+                        <Image Source="images/126466-multimedia-collection/avatar.png" Width="16"/>
                         <Label Content="Movie Search" FontWeight="Bold" FontFamily="Segoe UI Black" FontSize="16" Foreground="#FF2E2E31" />
                     </DockPanel>
                     
@@ -35,12 +35,12 @@
                         <Image>
                             <Image.Style>
                                 <Style TargetType="Image">
-                                    <Setter Property="Source" Value="images/126466-multimedia-collection/png/next-1.png"/>
+                                    <Setter Property="Source" Value="images/126466-multimedia-collection/avatar.png"/>
                                     <Setter Property="Height" Value="auto"/>
                                     <Setter Property="Width" Value="100"/>
                                     <Style.Triggers>
                                         <Trigger Property="IsMouseOver" Value="True">
-                                            <Setter Property="Source" Value="images/126466-multimedia-collection/png/next.png"/>
+                                            <Setter Property="Source" Value="images/126466-multimedia-collection/avatar.png"/>
                                             <Setter Property="Width" Value="105"/>
                                         </Trigger>
                                     </Style.Triggers>
@@ -60,25 +60,25 @@
             <StackPanel >
                 <Button Height="50" Style="{DynamicResource menuBtns}" HorizontalContentAlignment="Left">
                     <DockPanel Width="220" Margin="15,0,0,0">
-                        <Image Source="images/126466-multimedia-collection/png/next.png" Width="32"/>
+                        <Image Source="images/126466-multimedia-collection/avatar.png" Width="32"/>
                         <Label Content="Sth" Foreground="White" FontSize="16"/>
                     </DockPanel>
                 </Button>
                 <Button Height="50" Style="{DynamicResource menuBtns}">
                     <DockPanel Width="220" Margin="15,0,0,0">
-                        <Image Source="images/126466-multimedia-collection/png/next.png" Width="32"/>
+                        <Image Source="images/126466-multimedia-collection/avatar.png" Width="32"/>
                         <Label Content="Sth" Foreground="White" FontSize="16"/>
                     </DockPanel>
                 </Button>
                 <Button Height="50" Style="{DynamicResource menuBtns}">
                     <DockPanel Width="220" Margin="15,0,0,0">
-                        <Image Source="images/126466-multimedia-collection/png/next.png" Width="32"/>
+                        <Image Source="images/126466-multimedia-collection/avatar.png" Width="32"/>
                         <Label Content="Sth" Foreground="White" FontSize="16"/>
                     </DockPanel>
                 </Button>
                 <Button Height="50" Style="{DynamicResource menuBtns}">
                     <DockPanel Width="220" Margin="15,0,0,0">
-                        <Image Source="images/126466-multimedia-collection/png/next.png" Width="32"/>
+                        <Image Source="images/126466-multimedia-collection/avatar.png" Width="32"/>
                         <Label Content="Sth" Foreground="White" FontSize="16"/>
                     </DockPanel>
                 </Button>

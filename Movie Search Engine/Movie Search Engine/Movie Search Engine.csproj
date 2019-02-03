@@ -108,7 +108,31 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="images\" />
+    <Resource Include="images\126466-multimedia-collection\house.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\126466-multimedia-collection\avatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\126466-multimedia-collection\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\126466-multimedia-collection\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\126466-multimedia-collection\heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\126466-multimedia-collection\star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\126466-multimedia-collection\next-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\126466-multimedia-collection\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\126466-multimedia-collection\magnifying-glass.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
