@@ -13,7 +13,7 @@
             
         </Grid.RowDefinitions>
         <Border Grid.Row="0" >
-            <DataGrid BorderBrush="{x:Null}" BorderThickness="0" Background="red">
+            <DataGrid BorderBrush="{x:Null}" BorderThickness="0" Background="{x:Null}" >
                 
             </DataGrid>
         </Border>

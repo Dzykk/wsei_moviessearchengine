@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Movie_Search_Engine.UIController"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="300" d:DesignWidth="300" >
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -13,14 +13,13 @@
 
         </Grid.RowDefinitions>
         <Border Grid.Row="0" >
-            <StackPanel>
-            <Label Content="Polecane"/>
-            
-            </StackPanel>
+            <DataGrid BorderBrush="{x:Null}" BorderThickness="0" Background="{x:Null}">
+
+            </DataGrid>
         </Border>
         <Border Background="white" Grid.Row="1" >
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <Button Content="btn" Width="135" Margin="2,2" x:Name="add_movie" Click="add_movie_Click">
+                <Button Content="btn" Width="135" Margin="2,2">
 
                 </Button>
             </StackPanel>

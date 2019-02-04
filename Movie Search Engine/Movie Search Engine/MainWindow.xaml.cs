@@ -62,5 +62,20 @@ Class1.User_Choice(content_inner, new UserControl1());
         {
             Class1.User_Choice(content_inner, new UserControl4());
         }
+
+        private void menubuton_home_Loaded(object sender, RoutedEventArgs e)
+        {
+            Class1.User_Choice(content_inner, new UserControl1());
+        }
+
+        private void menubutton_home_Click(object sender, RoutedEventArgs e)
+        {
+            Class1.User_Choice(content_inner, new UserControl1());
+        }
+
+        private void menubutton_admin_Click(object sender, RoutedEventArgs e)
+        {
+            Class1.User_Choice(content_inner, new UserControl6());
+        }
     }
 }

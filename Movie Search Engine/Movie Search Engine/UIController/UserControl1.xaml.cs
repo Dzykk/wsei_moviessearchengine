@@ -24,5 +24,7 @@ namespace Movie_Search_Engine.UIController
         {
             InitializeComponent();
         }
+
+      
     }
 }
