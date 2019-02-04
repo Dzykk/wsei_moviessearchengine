@@ -40,41 +40,27 @@ namespace Movie_Search_Engine
             }
         }
 
-    private void menubutton_home_Click(object sender, RoutedEventArgs e)
-        {
-            Class1.User_Choice(content_inner, new UserControl1());
-        }
+
         private void menubutton_first_Click(object sender, RoutedEventArgs e)
         {
-Class1.User_Choice(content_inner, new UserControl2());
+Class1.User_Choice(content_inner, new UserControl1());
         }
 
         private void menubutton_second_Click(object sender, RoutedEventArgs e)
         {
-            Class1.User_Choice(content_inner, new UserControl3());
+            Class1.User_Choice(content_inner, new UserControl2());
         }
 
         private void menubutton_third_Click(object sender, RoutedEventArgs e)
         {
          
-                Class1.User_Choice(content_inner, new UserControl4());
+                Class1.User_Choice(content_inner, new UserControl3());
            
         }
 
         private void menubutton_fourth_Click(object sender, RoutedEventArgs e)
         {
-            Class1.User_Choice(content_inner, new UserControl5());
-        }
-
-        private void menubuton_home_Loaded(object sender, RoutedEventArgs e)
-        {
-            Class1.User_Choice(content_inner, new UserControl1());
-        }
-
-        private void menubutton_admin_Click(object sender, RoutedEventArgs e)
-        { 
-
-            Class1.User_Choice(content_inner, new UserControl6());
+            Class1.User_Choice(content_inner, new UserControl4());
         }
     }
 }

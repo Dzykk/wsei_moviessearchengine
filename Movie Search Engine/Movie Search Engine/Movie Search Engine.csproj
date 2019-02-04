@@ -68,12 +68,6 @@
     <Compile Include="UIController\UserControl4.xaml.cs">
       <DependentUpon>UserControl4.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UIController\UserControl5.xaml.cs">
-      <DependentUpon>UserControl5.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UIController\UserControl6.xaml.cs">
-      <DependentUpon>UserControl6.xaml</DependentUpon>
-    </Compile>
     <Page Include="LoginScreen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -106,14 +100,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UIController\UserControl4.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UIController\UserControl5.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UIController\UserControl6.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
