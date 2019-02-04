@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Movie_Search_Engine"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="900" Foreground="#FF9D9ED1" OpacityMask="#FFF9F9F9" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" AllowsTransparency="True" WindowStyle="None">
+        Title="MainWindow" Height="600" Width="900" Foreground="#FF9D9ED1" OpacityMask="#FFF9F9F9" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None" ResizeMode="CanResizeWithGrip">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -16,22 +16,26 @@
             <ColumnDefinition Width="210"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Border Grid.Column="0" Grid.Row="0" Background="#FF008D95" >
+        <Border Grid.Column="0" Grid.Row="0" Background="#FF008D95"  x:Name="wnd_move" MouseDown="wnd_move_MouseDown">
             <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200*"/>
+                    <ColumnDefinition Width="9*"/>
+                </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="35"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <Border>
+                <Border Grid.ColumnSpan="2" Margin="0,0,-0.4,0.2">
                     <DockPanel VerticalAlignment="Center" HorizontalAlignment="Center">
                         <Image Source="images/126466-multimedia-collection/avatar.png" Width="16"/>
                         <Label Content="Movie Search" FontWeight="Bold" FontFamily="Segoe UI Black" FontSize="16" Foreground="#FF2E2E31" />
                     </DockPanel>
-                    
-                    
+
+
                 </Border>
-                <Border Grid.Row="1">
-                    <DockPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Border Grid.ColumnSpan="2" Margin="0,35,-0.4,-0.4" Grid.RowSpan="2">
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
                         <Image>
                             <Image.Style>
                                 <Style TargetType="Image">
@@ -45,12 +49,13 @@
                                         </Trigger>
                                     </Style.Triggers>
                                 </Style>
-                                
+
                             </Image.Style>
-                            
+
                         </Image>
-                       
-                    </DockPanel>
+                        <Label HorizontalAlignment="Center" Content="Username" Foreground="#FF09090E"/>
+
+                    </StackPanel>
                 </Border>
             </Grid>
 
@@ -58,43 +63,67 @@
         </Border>
         <Border Grid.Column="0" Grid.Row="1" Background="#FF008D95" >
             <StackPanel >
-                <Button Height="50" Style="{DynamicResource menuBtns}" HorizontalContentAlignment="Left">
-                    <DockPanel Width="220" Margin="15,0,0,0">
-                        <Image Source="images/126466-multimedia-collection/avatar.png" Width="32"/>
-                        <Label Content="Sth" Foreground="White" FontSize="16"/>
+                <Button Height="50" Style="{DynamicResource menuBtns}" HorizontalContentAlignment="Left" x:Name="menubuton_home" Click="menubutton_home_Click" Loaded="menubuton_home_Loaded" >
+                    <DockPanel Width="200" Margin="15,0,0,0">
+                        <Image Source="images/126466-multimedia-collection/house.png" Width="32"/>
+                        <Label Content="Home" Foreground="White" FontSize="16"/>
                     </DockPanel>
                 </Button>
-                <Button Height="50" Style="{DynamicResource menuBtns}">
-                    <DockPanel Width="220" Margin="15,0,0,0">
+                <Button Height="50" Style="{DynamicResource menuBtns}" HorizontalContentAlignment="Left" x:Name="menubuton_first" Click="menubutton_first_Click" >
+                    <DockPanel Width="200" Margin="15,0,0,0">
                         <Image Source="images/126466-multimedia-collection/avatar.png" Width="32"/>
-                        <Label Content="Sth" Foreground="White" FontSize="16"/>
+                        <Label Content="Horror" Foreground="White" FontSize="16"/>
                     </DockPanel>
                 </Button>
-                <Button Height="50" Style="{DynamicResource menuBtns}">
-                    <DockPanel Width="220" Margin="15,0,0,0">
+                <Button Height="50" Style="{DynamicResource menuBtns}" HorizontalContentAlignment="Left" x:Name="menubuton_second" Click="menubutton_second_Click">
+                    <DockPanel Width="200" Margin="15,0,0,0">
                         <Image Source="images/126466-multimedia-collection/avatar.png" Width="32"/>
-                        <Label Content="Sth" Foreground="White" FontSize="16"/>
+                        <Label Content="Comedy" Foreground="White" FontSize="16"/>
                     </DockPanel>
                 </Button>
-                <Button Height="50" Style="{DynamicResource menuBtns}">
-                    <DockPanel Width="220" Margin="15,0,0,0">
+                <Button Height="50" Style="{DynamicResource menuBtns}" HorizontalContentAlignment="Left" x:Name="menubuton_third" Click="menubutton_third_Click">
+                    <DockPanel Width="200" Margin="15,0,0,0">
                         <Image Source="images/126466-multimedia-collection/avatar.png" Width="32"/>
-                        <Label Content="Sth" Foreground="White" FontSize="16"/>
+                        <Label Content="Sci-Fi" Foreground="White" FontSize="16"/>
+                    </DockPanel>
+                </Button>
+                <Button Height="50" Style="{DynamicResource menuBtns}" HorizontalContentAlignment="Left" x:Name="menubuton_fourth" Click="menubutton_fourth_Click">
+                    <DockPanel Width="200" Margin="15,0,0,0">
+                        <Image Source="images/126466-multimedia-collection/avatar.png" Width="32"/>
+                        <Label Content="Liked" Foreground="White" FontSize="16"/>
+                    </DockPanel>
+                </Button>
+                <Button Height="50" Style="{DynamicResource menuBtns}" HorizontalContentAlignment="Left" x:Name="menubuton_admin" Click="menubutton_admin_Click">
+                    <DockPanel Width="200" Margin="15,0,0,0">
+                        <Image Source="images/126466-multimedia-collection/avatar.png" Width="32"/>
+                        <Label Content="Options" Foreground="White" FontSize="16"/>
                     </DockPanel>
                 </Button>
             </StackPanel>
-            
+
         </Border>
+        <Grid Grid.Column="1" Grid.Row="0" Grid.RowSpan="2">  
+            <Grid.Background> 
+               
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0.072"/>
+                    <GradientStop Color="#FF913219" Offset="1"/>
+                    <GradientStop Color="#FF9C462F" Offset="0.83"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="45"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+           
+          
+       
 
-
-
-        <Border Grid.Column="1" Grid.Row="0" Background="#FF008D95" >
+            <Border Grid.Column="1" Grid.Row="0" >
             <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="35"/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-                <Border Background="White">
+              
+                <Border Background="White"  MouseDown="wnd_move_MouseDown">
                     <DockPanel Width="80" HorizontalAlignment="Right" Margin="0,0,2,0">
                         <Button Content="__" Style="{DynamicResource miniBtns}" FontSize="12"/>
                         <Button Content="X"  Style="{DynamicResource miniBtns}" x:Name="btn_close" Click="btn_close_Click" FontSize="12"/>
@@ -102,5 +131,31 @@
                 </Border>
             </Grid>
         </Border>
+            <Border Margin="50,35,128.4,0" Grid.RowSpan="2" >
+                <StackPanel>
+                <DockPanel Margin="5,5">
+                   
+                    <Label Content="Search" Foreground="Black" FontSize="16"/>
+                        <TextBox Name="txtSearch" Foreground="#FF161617" FontSize="18"  Margin="49,0,28.4,0" Width="304">
+                            <TextBox.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="White" Offset="0"/>
+                                    <GradientStop Color="#FFC9C4FC" Offset="1"/>
+                                </LinearGradientBrush>
+                            </TextBox.Background>
+                        </TextBox>
+                     
+                     <Image Source="images/126466-multimedia-collection/magnifying-glass.png" Width="20"/>
+                   </DockPanel><Separator></Separator> </StackPanel>
+            </Border>
+          
+        <Border Grid.Column="1" Grid.Row="2" >
+                
+            <Grid x:Name="content_inner">
+                
+            </Grid>
+        </Border>
+           
+       </Grid>
     </Grid>
 </Window>
