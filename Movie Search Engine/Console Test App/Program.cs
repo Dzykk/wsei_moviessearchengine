@@ -14,21 +14,13 @@ namespace Console_Test_App
         static void Main(string[] args)
         {
             DBConnect connection = new DBConnect();
-            using (SqlConnection con = connection.Connect())
-            { 
-            using (SqlCommand command = new SqlCommand("SELECT * FROM Movie", con))
-            using (SqlDataReader reader = command.ExecuteReader())
+            DataManipulator dm = new DataManipulator();
+            //DataManipulator.ShowTable(DataManipulator.GetMovieData());
+
+            foreach (Movie m in dm.MovieList)
             {
-                while (reader.Read())
-                {
-                    Console.WriteLine(reader.GetString(1));
-                }
+                Console.WriteLine(m.Title);
             }
-
-            }
-
-
-            Console.ReadKey();
         }
     }
 }
