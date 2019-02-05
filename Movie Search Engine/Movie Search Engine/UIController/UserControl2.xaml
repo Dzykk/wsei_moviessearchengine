@@ -14,9 +14,7 @@
 
             </Grid.RowDefinitions>
             <Border Grid.Row="0" >
-                <DataGrid BorderBrush="{x:Null}" BorderThickness="0" Background="blue">
-
-                </DataGrid>
+                <Label Content="Horror"/>
             </Border>
             <Border Background="white" Grid.Row="1" >
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">

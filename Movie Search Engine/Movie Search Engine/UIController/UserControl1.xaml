@@ -7,21 +7,25 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300" >
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="109*"/>
+            <ColumnDefinition Width="191*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition Height="40"/>
-            
+
         </Grid.RowDefinitions>
-        <Border Grid.Row="0" >
-            <Label Content="Polecane"/>
+        <Border Grid.Row="0" Grid.ColumnSpan="2" >
+            <Label Content="Home"/>
         </Border>
-        <Border Background="white" Grid.Row="1" >
+        <Border Background="white" Grid.Row="1" Grid.ColumnSpan="2" >
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                 <Button Content="btn" Width="135" Margin="2,2">
-                    
+
                 </Button>
             </StackPanel>
-            
+
         </Border>
     </Grid>
 </UserControl>

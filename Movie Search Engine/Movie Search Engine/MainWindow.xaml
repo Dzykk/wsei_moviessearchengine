@@ -102,9 +102,9 @@
             </StackPanel>
 
         </Border>
-        <Grid Grid.Column="1" Grid.Row="0" Grid.RowSpan="2">  
-            <Grid.Background> 
-               
+        <Grid Grid.Column="1" Grid.Row="0" Grid.RowSpan="2">
+            <Grid.Background>
+
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="White" Offset="0.072"/>
                     <GradientStop Color="#FF913219" Offset="1"/>
@@ -116,26 +116,26 @@
                 <RowDefinition Height="45"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-           
-          
-       
+
+
+
 
             <Border Grid.Column="1" Grid.Row="0" >
-            <Grid>
-              
-                <Border Background="White"  MouseDown="wnd_move_MouseDown">
-                    <DockPanel Width="80" HorizontalAlignment="Right" Margin="0,0,2,0">
-                        <Button Content="__" Style="{DynamicResource miniBtns}" FontSize="12"/>
-                        <Button Content="X"  Style="{DynamicResource miniBtns}" x:Name="btn_close" Click="btn_close_Click" FontSize="12"/>
-                    </DockPanel>
-                </Border>
-            </Grid>
-        </Border>
+                <Grid>
+
+                    <Border Background="White"  MouseDown="wnd_move_MouseDown">
+                        <DockPanel Width="80" HorizontalAlignment="Right" Margin="0,0,2,0">
+                            <Button Content="__" Style="{DynamicResource miniBtns}" FontSize="12"/>
+                            <Button Content="X"  Style="{DynamicResource miniBtns}" x:Name="btn_close" Click="btn_close_Click" FontSize="12"/>
+                        </DockPanel>
+                    </Border>
+                </Grid>
+            </Border>
             <Border Margin="50,35,128.4,0" Grid.RowSpan="2" >
                 <StackPanel>
-                <DockPanel Margin="5,5">
-                   
-                    <Label Content="Search" Foreground="Black" FontSize="16"/>
+                    <DockPanel Margin="5,5">
+
+                        <Label Content="Search" Foreground="Black" FontSize="16"/>
                         <TextBox Name="txtSearch" Foreground="#FF161617" FontSize="18"  Margin="49,0,28.4,0" Width="304">
                             <TextBox.Background>
                                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -144,18 +144,21 @@
                                 </LinearGradientBrush>
                             </TextBox.Background>
                         </TextBox>
-                     
-                     <Image Source="images/126466-multimedia-collection/magnifying-glass.png" Width="20"/>
-                   </DockPanel><Separator></Separator> </StackPanel>
+
+                        <Image Source="images/126466-multimedia-collection/magnifying-glass.png" Width="20"/>
+                    </DockPanel>
+                    <Separator></Separator>
+                </StackPanel>
             </Border>
-          
-        <Border Grid.Column="1" Grid.Row="2" >
-                
-            <Grid x:Name="content_inner">
-                
-            </Grid>
-        </Border>
-           
-       </Grid>
+
+            <Border Grid.Column="1" Grid.Row="2" >
+
+                <Grid x:Name="content_inner">
+
+                </Grid>
+            </Border>
+
+        </Grid>
     </Grid>
 </Window>
+
