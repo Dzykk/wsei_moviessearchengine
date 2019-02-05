@@ -56,7 +56,7 @@ namespace Movie_Search_Engine
                     int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
                     if (count == 1)
                     {
-                        MainWindow dashboard = new MainWindow();
+                        MainWindow dashboard = new MainWindow(txtUsername.Text);
                         dashboard.Show();
                         this.Close();
                     }
