@@ -17,7 +17,17 @@
 
         </Grid.RowDefinitions>
         <Border Grid.Row="0" Grid.ColumnSpan="2" >
-            <Label Content="Home"/>
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+           
+            <StackPanel>
+                <Label Content="Polecane"/>
+                <DockPanel x:Name="Polecane">  
+               
+              
+                </DockPanel>
+               
+            </StackPanel> 
+            </ScrollViewer>
         </Border>
         <Border Background="white" Grid.Row="1" Grid.ColumnSpan="2" >
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
