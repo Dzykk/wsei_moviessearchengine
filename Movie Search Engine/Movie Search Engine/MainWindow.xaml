@@ -53,8 +53,8 @@
                             </Image.Style>
 
                         </Image>
-                        <Label HorizontalAlignment="Center" Content="Username" Foreground="#FF09090E"/>
-
+                        <Label x:Name="Username_txt" HorizontalAlignment="Center" Foreground="#FF09090E"/>
+                       
                     </StackPanel>
                 </Border>
             </Grid>
@@ -93,7 +93,7 @@
                         <Label Content="Liked" Foreground="White" FontSize="16"/>
                     </DockPanel>
                 </Button>
-                <Button Height="50" Style="{DynamicResource menuBtns}" HorizontalContentAlignment="Left" x:Name="menubuton_admin" Click="menubutton_admin_Click">
+                <Button Height="50" Style="{DynamicResource menuBtns}" HorizontalContentAlignment="Left" x:Name="menubuton_admin" Click="menubutton_admin_Click" Visibility="Hidden">
                     <DockPanel Width="200" Margin="15,0,0,0">
                         <Image Source="images/126466-multimedia-collection/avatar.png" Width="32"/>
                         <Label Content="Options" Foreground="White" FontSize="16"/>

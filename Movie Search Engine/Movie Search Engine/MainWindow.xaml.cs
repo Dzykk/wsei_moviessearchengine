@@ -22,9 +22,15 @@ namespace Movie_Search_Engine
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        public MainWindow(string Username)
         {
             InitializeComponent();
+            Username_txt.Content = Username;
+            if (Username == "Administrator1")
+            {
+                menubuton_admin.Visibility=Visibility.Visible;
+
+                        }
         }
 
         private void btn_close_Click(object sender, RoutedEventArgs e)
