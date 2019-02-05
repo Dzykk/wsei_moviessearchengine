@@ -27,18 +27,19 @@ namespace Movie_Search_Engine.UIController
             InitializeComponent();
         }
 
-        private void add_movie_Click(object sender, RoutedEventArgs e)
-        {
-            DBConnect con = new DBConnect();
-            SqlConnection sqlCon = con.Connect();
-            try
-            {
+        //    private void add_movie_Click(object sender, RoutedEventArgs e)
+        //    {
+        //        DBConnect con = new DBConnect();
+        //        SqlConnection sqlCon = con.Connect();
+        //        try
+        //        {
 
-                sqlCon.Open();
-                string query = "insert into movies (name, mm) values ;
-                SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
-                sqlCmd.CommandType = CommandType.Text;
+        //            sqlCon.Open();
+        //            string query = "insert into movies (name, mm) values ;
+        //            SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
+        //            sqlCmd.CommandType = CommandType.Text;
 
-            }
+        //        }
+        //}
     }
 }
