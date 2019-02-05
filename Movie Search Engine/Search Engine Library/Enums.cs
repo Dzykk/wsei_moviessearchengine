@@ -3,12 +3,12 @@
    
         public enum Genre
         {
-            Action, Adventure, Comedy, Documentary, Family, Fantasy, Horror, Scifi, Thriller
+            Action = 1, Adventure, Comedy, Documentary, Family, Fantasy, Horror, Scifi, Thriller
         }
 
         public enum Language
         {
-            English, Polish, German, Spanish
+            English = 1, Polish, German, Spanish
         }
 
         public enum Privilege

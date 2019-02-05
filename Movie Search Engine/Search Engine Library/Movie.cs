@@ -42,9 +42,9 @@ namespace Search_Engine_Library
             }
         }
         
-        private int price;
+        private string price;
         [Column(Name = "Price", Storage = "price", CanBeNull = true)]
-        public int Price
+        public string Price
         {
             get
             {
@@ -111,9 +111,9 @@ namespace Search_Engine_Library
                 this.runtime = value;
             }
         }
-        private Image poster;
+        private byte[] poster;
         [Column(Name = "Poster", Storage = "poster", CanBeNull = true)]
-        public Image Poster
+        public byte[] Poster
         {
             get
             {
@@ -124,6 +124,8 @@ namespace Search_Engine_Library
                 this.poster = value;
             }
         }
+
+        public Image PosterImage => PosterByteToImage(Poster);
 
         public Movie (){}
 
@@ -180,6 +182,14 @@ namespace Search_Engine_Library
         public static bool operator <=(Movie m1, Movie m2)
         {
             return m1.CompareTo(m2) == 0;
+        }
+
+        public Image PosterByteToImage(byte[] byteposter)
+        {
+            using (MemoryStream mstream = new MemoryStream(byteposter))
+            {
+                return Image.FromStream(mstream);
+            }
         }
     }
 }
