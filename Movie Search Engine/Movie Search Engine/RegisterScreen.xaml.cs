@@ -43,53 +43,52 @@ namespace Movie_Search_Engine
 
         private void btnSignin_Click(object sender, RoutedEventArgs e)
         {
-            //DBConnect dbcon = new DBConnect();
-            //SqlConnection con = dbcon.Connect();
-            //con.Open();
-            //string userquery = "SELECT TOP (1) [Login] FROM [dbo].[Account] WHERE [Login] = @Login";
-            //SqlCommand cmd = new SqlCommand(userquery, con);
-            //cmd.CommandType = CommandType.Text;
-            //cmd.Parameters.AddWithValue("@Login", txtUsername.Text);
-            //cmd.Parameters.AddWithValue("@Password", txtPassword.Password);
-            //string existinguser = cmd.ExecuteScalar().ToString();
-            //if (!string.IsNullOrEmpty(existinguser))
-            //{
-            //    MessageBox.Show("Login already taken!");
-            //}
-            //else
-            //{
-            //    string userquery2 = "INSERT INTO [dbo].[Account] ([Login], [Password], [AccountType] ) VALUES (@Login, @Password, 'AppUser')";
-            //    SqlCommand cmd2 = new SqlCommand(userquery2, con);
-            //    cmd2.Parameters.AddWithValue("@Login", txtUsername.Text);
-            //    cmd2.Parameters.AddWithValue("@Password", txtPassword.Password);
-            //    cmd2.ExecuteNonQuery();
-            //    MessageBox.Show("You can now log in!");
-            //    loginScreen logScreen = new loginScreen();
-            //    logScreen.Show();
-            //    this.Close();
-            //}
             DBConnect dbcon = new DBConnect();
             SqlConnection con = dbcon.Connect();
-            con.Open();
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandText= "INSERT INTO[dbo].[Account]([Login], [Password], [AccountType] ) VALUES(@Login, @Password, 'AppUser')";
-            cmd.Parameters.AddWithValue("@Login", txtUsername.Text);
-           cmd.Parameters.AddWithValue("@Password", txtPassword.Password);
-            cmd.Connection = con;
-            int a = cmd.ExecuteNonQuery();
-            if (a > 0)
+
+            try
             {
-                MessageBox.Show("You can now log in!");
-                loginScreen logScreen = new loginScreen();
-                logScreen.Show();
-                this.Close();
-        }
-            else
-            {
-                MessageBox.Show("Username or password is incorrect.");
+
+                if (con.State == ConnectionState.Closed)
+                {
+
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.Connection = con;
+                    cmd.CommandText = "SELECT COUNT(*) FROM[dbo].[Account] WHERE[Login] = @Login";
+                    cmd.Parameters.Clear();
+                    cmd.Parameters.AddWithValue("@Login", txtUsername.Text);
+
+
+                    int usercheck = (int)cmd.ExecuteScalar();
+                    if (usercheck == 0)
+                    {
+                        cmd.CommandText = "INSERT INTO[dbo].[Account]([Login], [Password], [AccountType] ) VALUES(@Login, @Password, 'AppUser')";
+                        cmd.Parameters.Clear();
+                        cmd.Parameters.AddWithValue("@Login", txtUsername.Text);
+                        cmd.Parameters.AddWithValue("@Password", txtPassword.Password);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("You can now log in!");
+                        loginScreen logScreen = new loginScreen();
+                        logScreen.Show();
+                        this.Close();
+                    }
+                    else
+
+                    {
+                        MessageBox.Show("Login already taken!");
+                    }
+
+                }
             }
-
-
-}
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
     }
 }
