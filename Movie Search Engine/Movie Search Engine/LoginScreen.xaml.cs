@@ -77,6 +77,11 @@ namespace Movie_Search_Engine
             }
         }
 
-       
+        private void Register_btn_Click(object sender, RoutedEventArgs e)
+        {
+            RegisterScreen regScreen = new RegisterScreen();
+            regScreen.Show();
+            this.Close();
+        }
     }
 }
