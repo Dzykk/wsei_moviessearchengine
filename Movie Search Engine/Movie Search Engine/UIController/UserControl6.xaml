@@ -15,13 +15,20 @@
         <Border Grid.Row="0" >
             <StackPanel>
                 <Label Content="Options"/>
+                <TextBox x:Name="txt1" Height="23" TextWrapping="Wrap"  Margin="74,0,102,0" RenderTransformOrigin="0.261,1.974"/>
+                <TextBox x:Name="txt2" Height="23" TextWrapping="Wrap"  Margin="74,0,102,0" RenderTransformOrigin="0.261,1.974"/>
+                <TextBox x:Name="txt3" Height="23" TextWrapping="Wrap"  Margin="74,0,102,0" RenderTransformOrigin="0.261,1.974"/>
+                <TextBox x:Name="txt4" Height="23" TextWrapping="Wrap"  Margin="74,0,102,0" RenderTransformOrigin="0.261,1.974"/>
+                <TextBox x:Name="txt5" Height="23" TextWrapping="Wrap"  Margin="74,0,102,0" RenderTransformOrigin="0.261,1.974"/>
+                <TextBox x:Name="txt6" Height="23" TextWrapping="Wrap"  Margin="74,0,102,0" RenderTransformOrigin="0.261,1.974"/>
                 
-                
+
+
             </StackPanel>
         </Border>
         <Border Background="white" Grid.Row="1" >
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <Button Content="btn" Width="135" Margin="2,2">
+                <Button Content="btn" Width="135" Margin="2,2" x:Name="addMovie" Click="addMovie_Click">
 
                 </Button>
             </StackPanel>
