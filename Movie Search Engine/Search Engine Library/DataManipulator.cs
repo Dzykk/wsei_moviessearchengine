@@ -99,5 +99,28 @@ namespace Search_Engine_Library
         //}
 
 
+
+        public void newuser()
+        {
+            DBConnect dbcon = new DBConnect();
+            SqlConnection con = dbcon.Connect();
+            con.Open();
+            string userquery = "SELECT TOP (1) [Login] FROM [dbo].[Account] WHERE [Login] = @Login";
+            SqlCommand cmd = new SqlCommand(userquery, con);
+            string existinguser = cmd.ExecuteScalar().ToString();
+            if (!string.IsNullOrEmpty(existinguser))
+            {
+                MessageBox.Show("Login already taken!");
+            }
+            else
+            {
+                string userquery2 = "INSERT INTO [dbo].[Account] ([Login], [Password], [AccountType] ) VALUES (@Login, @Password, 'AppUser')";
+                SqlCommand cmd2 = new SqlCommand(userquery2, con);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.AddWithValue("@Login", txtUsername.Text);
+                cmd.Parameters.AddWithValue("@Password", txtPassword.Password);
+                MessageBox.Show("You can now log in!");
+            }
+        }
     }
 }
