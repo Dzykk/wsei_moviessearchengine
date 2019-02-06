@@ -191,5 +191,10 @@ namespace Search_Engine_Library
                 return Image.FromStream(mstream);
             }
         }
+
+        public override string ToString()
+        {
+            return Title + ", released on " + Releasedate + ", " + Genre;
+        }
     }
 }
