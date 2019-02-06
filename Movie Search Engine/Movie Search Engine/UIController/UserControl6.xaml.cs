@@ -33,9 +33,15 @@ namespace Movie_Search_Engine.UIController
 
 
         private void addMovie_Click(object sender, RoutedEventArgs e)
-        {
-            DBConnect dbcon = new DBConnect();
+
+        { DBConnect dbcon = new DBConnect();
             SqlConnection con = dbcon.Connect();
+            try
+            {
+               
+                if (con.State == ConnectionState.Closed)
+                {
+                   
             con.Open();
             string userquery =
                 "MERGE [dbo].[Movie] AS tab " +
@@ -53,7 +59,18 @@ namespace Movie_Search_Engine.UIController
             cmd.Parameters.AddWithValue("@Genre", txt4.Text);
             cmd.Parameters.AddWithValue("@Language", txt5.Text);
             cmd.Parameters.AddWithValue("@Runtime", txt6.Text);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
         }
     }
+    }
     
-}
+
