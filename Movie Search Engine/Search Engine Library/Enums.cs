@@ -3,7 +3,7 @@
    
         public enum Genre
         {
-            Action = 1, Adventure, Comedy, Documentary, Family, Fantasy, Horror, Scifi, Thriller
+            Action = 1, Adventure, Comedy, Documentary, Drama, Family, Fantasy, Horror, Scifi, Thriller
         }
 
         public enum Language
