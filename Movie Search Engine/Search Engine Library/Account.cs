@@ -83,7 +83,7 @@ namespace Search_Engine_Library
         public static bool operator <=(Account a1, Account a2)
         {
             return a1.CompareTo(a2) == 0;
-        }
+        }       
 
     }
 }

@@ -74,6 +74,30 @@ namespace Search_Engine_Library
         {
             return (T)Enum.Parse(typeof(T), value, ignoreCase: true);
         }
+            
+        public void mv()
+        {
+            DBConnect dbcon = new DBConnect();
+            SqlConnection con = dbcon.Connect();
+            con.Open();
+            string userquery =
+                "MERGE [dbo].[Movie] AS tab " +
+                "USING (SELECT @Title AS Title, @Price AS Price, @ReleaseDate AS ReleaseDate, @Genre AS Genre, @Language AS [Language], @Runtime AS Runtime) AS src " +
+                "ON tab.Title = src.Title AND tab.ReleaseDate = src.ReleaseDate " +
+                "WHEN NOT MATCHED THEN " +
+                "INSERT (Title, Price, ReleaseDate, Genre, [Language], Runtime)" +
+                "VALUES (src.Title, src.Price, src.ReleaseDate, src.Genre, src.[Language], src.Runtime) " +
+                "END";                
+            SqlCommand cmd = new SqlCommand(userquery, con);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@Title", txt1.Text);
+            cmd.Parameters.AddWithValue("@Price", txt2.Password);
+            cmd.Parameters.AddWithValue("@ReleaseDate", txt3.Password);
+            cmd.Parameters.AddWithValue("@Genre", txt4.Password);
+            cmd.Parameters.AddWithValue("@Language", txt5.Password);
+            cmd.Parameters.AddWithValue("@Runtime", txt6.Password);
+        }
+
 
     }
 }

@@ -53,9 +53,11 @@ namespace Movie_Search_Engine
                     sqlCmd.CommandType = CommandType.Text;
                     sqlCmd.Parameters.AddWithValue("@Username", txtUsername.Text);
                     sqlCmd.Parameters.AddWithValue("@Password", txtPassword.Password);
+                    //UserHelper.UserObject(txtUsername.Text, txtPassword.Password);
+                    //Watchlist CurrentWatchList = new Watchlist(UserHelper.GetWatchlist(txtUsername.Text));
                     int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
                     if (count == 1)
-                    {
+                    {                       
                         MainWindow dashboard = new MainWindow(txtUsername.Text);
                         dashboard.Show();
                         this.Close();

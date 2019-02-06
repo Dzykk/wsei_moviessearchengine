@@ -77,6 +77,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <Compile Include="Watchlist.cs" />
+    <Compile Include="UserHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database.mdf">
