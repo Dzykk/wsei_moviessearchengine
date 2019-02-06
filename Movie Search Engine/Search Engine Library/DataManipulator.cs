@@ -75,38 +75,19 @@ namespace Search_Engine_Library
             return (T)Enum.Parse(typeof(T), value, ignoreCase: true);
         }
 
-        public void mv()
+        public static byte[] GetPoster(string path)
         {
-            
+            FileStream stream = new FileStream(path, FileMode.Open, FileAccess.Read);
+            BinaryReader reader = new BinaryReader(stream);
+            byte[] poster = reader.ReadBytes((int)stream.Length);
+            reader.Close();
+            stream.Close();
+            return poster;
 
         }
 
 
 
-        public void newuser()
-        {
-            //DBConnect dbcon = new DBConnect();
-            //SqlConnection con = dbcon.Connect();
-            //con.Open();
-            //string userquery = "SELECT TOP (1) [Login] FROM [dbo].[Account] WHERE [Login] = @Login";
-            //SqlCommand cmd = new SqlCommand(userquery, con);
-            //cmd.CommandType = CommandType.Text;
-            //cmd.Parameters.AddWithValue("@Login", txtUsername.Text);
-            //cmd.Parameters.AddWithValue("@Password", txtPassword.Password);
-            //string existinguser = cmd.ExecuteScalar().ToString();
-            //if (!string.IsNullOrEmpty(existinguser))
-            //{
-            //    MessageBox.Show("Login already taken!");
-            //}
-            //else
-            //{
-            //    string userquery2 = "INSERT INTO [dbo].[Account] ([Login], [Password], [AccountType] ) VALUES (@Login, @Password, 'AppUser')";
-            //    SqlCommand cmd2 = new SqlCommand(userquery2, con);
-            //    cmd2.Parameters.AddWithValue("@Login", txtUsername.Text);
-            //    cmd2.Parameters.AddWithValue("@Password", txtPassword.Password);
-            //    cmd2.ExecuteNonQuery();
-            //    MessageBox.Show("You can now log in!");
-            //}
-        }
+       
     }
 }

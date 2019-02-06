@@ -18,8 +18,8 @@ namespace Search_Engine_Library
         
         public SqlConnection Connect()
         {
-            conn = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = |DataDirectory|\Database.mdf; Integrated Security = True");
-   
+            //conn = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = |DataDirectory|\Database.mdf; Integrated Security = True");
+            conn = new SqlConnection(@"Data Source=DESKTOP-BOFB2DM\SQLEXPRESS;Initial Catalog=MovieDB;Integrated Security=True");
             return conn;
         }
 

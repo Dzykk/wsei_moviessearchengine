@@ -80,12 +80,16 @@ namespace Movie_Search_Engine
             if (a > 0)
             {
                 MessageBox.Show("You can now log in!");
-                  loginScreen logScreen = new loginScreen();
-                  logScreen.Show();
-                 this.Close();
+                loginScreen logScreen = new loginScreen();
+                logScreen.Show();
+                this.Close();
+        }
+            else
+            {
+                MessageBox.Show("Username or password is incorrect.");
             }
 
 
-        }
+}
     }
 }

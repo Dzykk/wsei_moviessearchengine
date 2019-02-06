@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace Movie_Search_Engine.UIController
 {
@@ -40,33 +41,34 @@ namespace Movie_Search_Engine.UIController
             {
                
                 if (con.State == ConnectionState.Closed)
-                {
-
-                
+                {                
                     con.Open();
-                    string userquery = "SELECT TOP (1) [Title] FROM [dbo].[Movie] WHERE [Title] = @Title AND [ReleaseDate] = @ReleaseDate";
+                    string path = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"posters\", "default.jpg");
+                    byte[] poster = DataManipulator.GetPoster(path);
+                    string userquery = "SELECT COUNT(*) FROM [dbo].[Movie] WHERE [Title] = @Title";
                     SqlCommand cmd = new SqlCommand(userquery, con);
                     cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.Clear();
                     cmd.Parameters.AddWithValue("@Title", txt1.Text);
-                    cmd.Parameters.AddWithValue("@ReleaseDate", txt3.Text);
-                    string movieindb = cmd.ExecuteScalar().ToString();
-                    if (!string.IsNullOrEmpty(movieindb))
-                    {
-                        MessageBox.Show("Movie already in the database!");
-                    }
+                    int recordscheck = (int)cmd.ExecuteScalar();
+                    if (recordscheck == 0)
+                    { 
+                        userquery = "INSERT INTO [dbo].[Movie] (Title, Price, ReleaseDate, Genre, [Language], Runtime, Poster) VALUES (@Title, @Price, @ReleaseDate, @Genre, @Language, @Runtime, @Poster)";
+                        cmd.CommandText = userquery;
+                        cmd.Parameters.Clear();
+                        cmd.Parameters.AddWithValue("@Title", txt1.Text);
+                        cmd.Parameters.AddWithValue("@Price", txt2.Text);
+                        cmd.Parameters.AddWithValue("@ReleaseDate", txt3.Text);
+                        cmd.Parameters.AddWithValue("@Genre", txt4.Text);
+                        cmd.Parameters.AddWithValue("@Language", txt5.Text);
+                        cmd.Parameters.AddWithValue("@Runtime", txt6.Text);
+                        cmd.Parameters.Add("Poster", SqlDbType.Image, poster.Length).Value = poster;
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Movie added successfully.");
+                    }                 
                     else
                     {
-                        string userquery2 = "INSERT INTO [dbo].[Movie] (Title, Price, ReleaseDate, Genre, [Language], Runtime) VALUES (@Title, @Price, @ReleaseDate, @Genre, @Language, @Runtime)";
-                        SqlCommand cmd2 = new SqlCommand(userquery2, con);
-                        cmd2.CommandType = CommandType.Text;
-                        cmd2.Parameters.AddWithValue("@Title", txt1.Text);
-                        cmd2.Parameters.AddWithValue("@Price", txt2.Text);
-                        cmd2.Parameters.AddWithValue("@ReleaseDate", txt3);
-                        cmd2.Parameters.AddWithValue("@Genre", txt4.Text);
-                        cmd2.Parameters.AddWithValue("@Language", txt5.Text);
-                        cmd2.Parameters.AddWithValue("@Runtime", txt6.Text);
-                        cmd2.ExecuteNonQuery();
-
+                        MessageBox.Show("Movie already in the database!");
                     }
                 }
             }
