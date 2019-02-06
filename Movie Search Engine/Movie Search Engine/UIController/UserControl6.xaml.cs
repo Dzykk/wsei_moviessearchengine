@@ -41,24 +41,33 @@ namespace Movie_Search_Engine.UIController
                
                 if (con.State == ConnectionState.Closed)
                 {
-                   
-            con.Open();
-            string userquery =
-                "MERGE [dbo].[Movie] AS tab " +
-                "USING (SELECT @Title AS Title, @Price AS Price, @ReleaseDate AS ReleaseDate, @Genre AS Genre, @Language AS [Language], @Runtime AS Runtime) AS src " +
-                "ON tab.Title = src.Title AND tab.ReleaseDate = src.ReleaseDate " +
-                "WHEN NOT MATCHED THEN " +
-                "INSERT (Title, Price, ReleaseDate, Genre, [Language], Runtime)" +
-                "VALUES (src.Title, src.Price, src.ReleaseDate, src.Genre, src.[Language], src.Runtime) " +
-                "END";
-            SqlCommand cmd = new SqlCommand(userquery, con);
-            cmd.CommandType = CommandType.Text;
-            cmd.Parameters.AddWithValue("@Title", txt1.Text);
-            cmd.Parameters.AddWithValue("@Price", txt2.Text);
-            cmd.Parameters.AddWithValue("@ReleaseDate", txt3.Text);
-            cmd.Parameters.AddWithValue("@Genre", txt4.Text);
-            cmd.Parameters.AddWithValue("@Language", txt5.Text);
-            cmd.Parameters.AddWithValue("@Runtime", txt6.Text);
+
+                
+                    con.Open();
+                    string userquery = "SELECT TOP (1) [Title] FROM [dbo].[Movie] WHERE [Title] = @Title AND [ReleaseDate] = @ReleaseDate";
+                    SqlCommand cmd = new SqlCommand(userquery, con);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.AddWithValue("@Title", txt1.Text);
+                    cmd.Parameters.AddWithValue("@ReleaseDate", txt3.Text);
+                    string movieindb = cmd.ExecuteScalar().ToString();
+                    if (!string.IsNullOrEmpty(movieindb))
+                    {
+                        MessageBox.Show("Movie already in the database!");
+                    }
+                    else
+                    {
+                        string userquery2 = "INSERT INTO [dbo].[Movie] (Title, Price, ReleaseDate, Genre, [Language], Runtime) VALUES (@Title, @Price, @ReleaseDate, @Genre, @Language, @Runtime)";
+                        SqlCommand cmd2 = new SqlCommand(userquery2, con);
+                        cmd2.CommandType = CommandType.Text;
+                        cmd2.Parameters.AddWithValue("@Title", txt1.Text);
+                        cmd2.Parameters.AddWithValue("@Price", txt2.Text);
+                        cmd2.Parameters.AddWithValue("@ReleaseDate", txt3);
+                        cmd2.Parameters.AddWithValue("@Genre", txt4.Text);
+                        cmd2.Parameters.AddWithValue("@Language", txt5.Text);
+                        cmd2.Parameters.AddWithValue("@Runtime", txt6.Text);
+                        cmd2.ExecuteNonQuery();
+
+                    }
                 }
             }
             catch (Exception ex)
