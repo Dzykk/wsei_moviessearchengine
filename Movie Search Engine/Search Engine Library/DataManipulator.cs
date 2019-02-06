@@ -74,29 +74,38 @@ namespace Search_Engine_Library
         {
             return (T)Enum.Parse(typeof(T), value, ignoreCase: true);
         }
-            
-        //public void mv()
-        //{
-        //    DBConnect dbcon = new DBConnect();
-        //    SqlConnection con = dbcon.Connect();
-        //    con.Open();
-        //    string userquery =
-        //        "MERGE [dbo].[Movie] AS tab " +
-        //        "USING (SELECT @Title AS Title, @Price AS Price, @ReleaseDate AS ReleaseDate, @Genre AS Genre, @Language AS [Language], @Runtime AS Runtime) AS src " +
-        //        "ON tab.Title = src.Title AND tab.ReleaseDate = src.ReleaseDate " +
-        //        "WHEN NOT MATCHED THEN " +
-        //        "INSERT (Title, Price, ReleaseDate, Genre, [Language], Runtime)" +
-        //        "VALUES (src.Title, src.Price, src.ReleaseDate, src.Genre, src.[Language], src.Runtime) " +
-        //        "END";                
-        //    SqlCommand cmd = new SqlCommand(userquery, con);
-        //    cmd.CommandType = CommandType.Text;
-        //    cmd.Parameters.AddWithValue("@Title", txt1.Text);
-        //    cmd.Parameters.AddWithValue("@Price", txt2.Password);
-        //    cmd.Parameters.AddWithValue("@ReleaseDate", txt3.Password);
-        //    cmd.Parameters.AddWithValue("@Genre", txt4.Password);
-        //    cmd.Parameters.AddWithValue("@Language", txt5.Password);
-        //    cmd.Parameters.AddWithValue("@Runtime", txt6.Password);
-        //}
+
+        public void mv()
+        {
+            DBConnect dbcon = new DBConnect();
+            SqlConnection con = dbcon.Connect();
+            con.Open();
+            string userquery = "SELECT TOP (1) [Title] FROM [dbo].[Movie] WHERE [Title] = @Title AND [ReleaseDate] = @ReleaseDate";
+            SqlCommand cmd = new SqlCommand(userquery, con);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@Title", txt1.Text);
+            cmd.Parameters.AddWithValue("@ReleaseDate", txt3.Password);
+            string movieindb = cmd.ExecuteScalar().ToString();
+            if (!string.IsNullOrEmpty(movieindb))
+            {
+                MessageBox.Show("Movie already in the database!");
+            }
+            else
+            { 
+                string userquery2 = "INSERT INTO [dbo].[Movie] (Title, Price, ReleaseDate, Genre, [Language], Runtime) VALUES (@Title, @Price, @ReleaseDate, @Genre, @Language, @Runtime)";
+                SqlCommand cmd2 = new SqlCommand(userquery2, con);
+                cmd2.CommandType = CommandType.Text;
+                cmd2.Parameters.AddWithValue("@Title", txt1.Text);
+                cmd2.Parameters.AddWithValue("@Price", txt2.Password);
+                cmd2.Parameters.AddWithValue("@ReleaseDate", txt3.Password);
+                cmd2.Parameters.AddWithValue("@Genre", txt4.Password);
+                cmd2.Parameters.AddWithValue("@Language", txt5.Password);
+                cmd2.Parameters.AddWithValue("@Runtime", txt6.Password);
+                cmd2.ExecuteNonQuery();
+
+            }           
+
+        }
 
 
 
@@ -107,6 +116,9 @@ namespace Search_Engine_Library
             con.Open();
             string userquery = "SELECT TOP (1) [Login] FROM [dbo].[Account] WHERE [Login] = @Login";
             SqlCommand cmd = new SqlCommand(userquery, con);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@Login", txtUsername.Text);
+            cmd.Parameters.AddWithValue("@Password", txtPassword.Password);
             string existinguser = cmd.ExecuteScalar().ToString();
             if (!string.IsNullOrEmpty(existinguser))
             {
@@ -116,9 +128,9 @@ namespace Search_Engine_Library
             {
                 string userquery2 = "INSERT INTO [dbo].[Account] ([Login], [Password], [AccountType] ) VALUES (@Login, @Password, 'AppUser')";
                 SqlCommand cmd2 = new SqlCommand(userquery2, con);
-                cmd.CommandType = CommandType.Text;
-                cmd.Parameters.AddWithValue("@Login", txtUsername.Text);
-                cmd.Parameters.AddWithValue("@Password", txtPassword.Password);
+                cmd2.Parameters.AddWithValue("@Login", txtUsername.Text);
+                cmd2.Parameters.AddWithValue("@Password", txtPassword.Password);
+                cmd2.ExecuteNonQuery();
                 MessageBox.Show("You can now log in!");
             }
         }

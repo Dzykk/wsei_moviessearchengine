@@ -27,6 +27,11 @@ namespace Search_Engine_Library
             {
                 this.privileges = value;
             }
-        }               
+        }
+
+        public override string ToString()
+        {
+            return Login + "is a registered App User";
+        }
     }
 }

@@ -15,7 +15,8 @@ namespace Console_Test_App
         {
             DBConnect connection = new DBConnect();
             DataManipulator dm = new DataManipulator();
-            //DataManipulator.ShowTable(DataManipulator.GetMovieData());
+            UserHelper.UserObject("User1", "q1w2e3");
+            Watchlist CurrentWatchList = new Watchlist(UserHelper.GetWatchlist("User1"));
 
             foreach (Movie m in dm.MovieList)
             {
