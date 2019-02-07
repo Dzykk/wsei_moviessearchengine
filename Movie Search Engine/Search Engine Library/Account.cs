@@ -11,8 +11,8 @@ using System.Data.Linq.Mapping;
 namespace Search_Engine_Library
 {
     [Table(Name = "Account")]
-    public abstract class Account : IComparable<Account>, IEquatable<Account>
-    {
+    public class Account : IComparable<Account>, IEquatable<Account>
+    {     
 
         protected string login;
         [Column(Name = "Login", Storage = "login", IsPrimaryKey = false)]
@@ -39,6 +39,12 @@ namespace Search_Engine_Library
         public bool Equals(Account other)
         {
             return this.Login.Equals(other.Login);
+        }
+
+        public override bool Equals(Object obj)
+        {
+            if (obj == null || this.GetType().Equals(obj.GetType())) return false;
+            else return this.Equals(obj);
         }
 
         public static bool Equals(Account a1, Account a2)

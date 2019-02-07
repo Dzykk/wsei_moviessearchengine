@@ -19,6 +19,7 @@ namespace Search_Engine_Library
         {
             this.login = login;
             this.password = password;
+            this.privileges = Privilege.AppUser;
         }
         [Column(Name = "AccountType", Storage = "privileges", IsPrimaryKey = false)]
         protected Privilege privileges

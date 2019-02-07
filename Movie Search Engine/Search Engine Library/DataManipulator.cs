@@ -56,19 +56,8 @@ namespace Search_Engine_Library
            Runtime = row.Field<string>("Runtime"),
            Poster = row.Field<byte[]>("Poster")
        }
-        ).ToList();
-
-        public static void ShowTable(DataTable table)
-        {
-            foreach (DataRow row in table.Rows)
-            {
-                Console.WriteLine();
-                for (int x = 0; x < table.Columns.Count; x++)
-                {
-                    Console.Write(row[x].ToString() + " ");
-                }
-            }
-        }
+        ).ToList();   
+        
 
         public static T ParseEnum<T>(string value)
         {
