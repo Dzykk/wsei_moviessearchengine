@@ -14,7 +14,7 @@
         </Grid.RowDefinitions>
         <Border Grid.Row="0" >
             <StackPanel>
-                <Label Content="Options"/>
+                <Label HorizontalAlignment="Center" FontSize="24" Content="Options"/>
                 <Label Content="Title" Foreground="#FF09090E"/>
                 <TextBox Name="txt1" Height="23" TextWrapping="Wrap"  Margin="74,0,102,0" RenderTransformOrigin="0.261,1.974"/>
                 <Label Content="Price" Foreground="#FF09090E"/>
@@ -32,7 +32,7 @@
 
             </StackPanel>
         </Border>
-        <Border Background="white" Grid.Row="1" >
+        <Border  Grid.Row="1" >
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                 <Button Content="Add" Width="135" Margin="2,2" Name="addMovie" Click="addMovie_Click">
 

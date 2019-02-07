@@ -43,21 +43,10 @@ namespace Movie_Search_Engine.UIController
 
             DBConnect connection = new DBConnect();
             DataManipulator movies = new DataManipulator();
-            //DataManipulator.ShowTable(DataManipulator.GetMovieData());
-
-            //Image img = new System.Windows.Controls.Image();
-
-
-
-            //title.Content = movies.MovieList[1].Title;
-            //Polecane.Children.Add(title);
-       
-        StackPanel stack = new System.Windows.Controls.StackPanel();
-                stack.HorizontalAlignment = HorizontalAlignment.Center;
-                Polecane.Children.Add(stack);
-
             for (int i = 0; i < movies.MovieList.Count; i++)
-            { 
+            {
+       
+             
                 Image img = new Image();
                 ImageClass images = new ImageClass();
                 var result = movies.MovieList[i].Poster;
@@ -67,8 +56,10 @@ namespace Movie_Search_Engine.UIController
                 BitObj.StreamSource = StreamObj;
                 BitObj.EndInit();
                 img.Source = BitObj;
-                img.Height = 100;
-                img.Width = 100;
+                img.Height = 130;
+                img.Width = 130;
+                img.HorizontalAlignment = HorizontalAlignment.Center;
+                img.VerticalAlignment = VerticalAlignment.Center;
 
                 Label title = new System.Windows.Controls.Label();
                 Label rlsDate = new System.Windows.Controls.Label();
@@ -77,33 +68,38 @@ namespace Movie_Search_Engine.UIController
                 Label rnTime = new System.Windows.Controls.Label();
                 Label price = new System.Windows.Controls.Label();
               
-                title.Content = "Title" + movies.MovieList[i].Title;
+             
+                title.Content = "Title: " + movies.MovieList[i].Title;
                 rlsDate.Content = "Realise date: " +movies.MovieList[i].Releasedate;
-                genre.Content = "Genre" + movies.MovieList[i].Genre;
-                lng.Content = "Language" + movies.MovieList[i].Language;
-                rnTime.Content = "Runtime"+ movies.MovieList[i].Runtime;
+                genre.Content = "Genre: " + movies.MovieList[i].Genre;
+                lng.Content = "Language: " + movies.MovieList[i].Language;
+                rnTime.Content = "Runtime: "+ movies.MovieList[i].Runtime;
                 price.Content = "Price: " + movies.MovieList[i].Price;
 
-                stack.Children.Add(img);
-                stack.Children.Add(price);
-                stack.Children.Add(title);
-                stack.Children.Add(rlsDate);
-                stack.Children.Add(lng);
-                stack.Children.Add(rnTime);
+                DockPanel dock = new System.Windows.Controls.DockPanel();
+                dock.Height = 200;
+                Category.Children.Add(dock);
+                dock.Children.Add(img);
+                StackPanel newstack = new System.Windows.Controls.StackPanel();
+                newstack.VerticalAlignment = VerticalAlignment.Center;
+                title.FontSize = 20;
+                
+                dock.Children.Add(newstack);
+                newstack.Children.Add(title);
+                newstack.Children.Add(genre);
+                newstack.Children.Add(price);
+                newstack.Children.Add(rlsDate);
+                newstack.Children.Add(lng);
+                newstack.Children.Add(rnTime);
+                newstack.Children.Add(new Separator());
+               
             }
 
 
         }
-            //foreach (Movie m in movies.MovieList)
-            //{
-            //    title.Content = m.Title;
 
 
-            //    Polecane.Children.Add(img);
-            //    Polecane.Children.Add(title);
-            //}
-
-
+     
 
     }
 

@@ -28,7 +28,7 @@
                 </Grid.RowDefinitions>
                 <Border Grid.ColumnSpan="2" Margin="0,0,-0.4,0.2">
                     <DockPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-                        <Image Source="images/126466-multimedia-collection/avatar.png" Width="16"/>
+                        <Image Source="images/126466-multimedia-collection/001-3d-glasses.png" Width="16"/>
                         <Label Content="Movie Search" FontWeight="Bold" FontFamily="Segoe UI Black" FontSize="16" Foreground="#FF2E2E31" />
                     </DockPanel>
 
@@ -63,42 +63,73 @@
         </Border>
         <Border Grid.Column="0" Grid.Row="1" Background="#FF008D95" >
             <StackPanel >
-                <Button Height="50" Style="{DynamicResource menuBtns}" HorizontalContentAlignment="Left" x:Name="menubuton_home" Click="menubutton_home_Click" Loaded="menubuton_home_Loaded" >
+                <Button Height="35" Style="{DynamicResource menuBtns}" HorizontalContentAlignment="Left" x:Name="menubuton_home" Click="menubutton_home_Click" Loaded="menubuton_home_Loaded" >
                     <DockPanel Width="200" Margin="15,0,0,0">
-                        <Image Source="images/126466-multimedia-collection/house.png" Width="32"/>
+                        <Image Source="images/126466-multimedia-collection/house.png" Width="27"/>
                         <Label Content="Home" Foreground="White" FontSize="16"/>
                     </DockPanel>
                 </Button>
-                <Button Height="50" Style="{DynamicResource menuBtns}" HorizontalContentAlignment="Left" x:Name="menubuton_first" Click="menubutton_first_Click" >
+                <Button Height="35" Margin="15,0" Style="{DynamicResource menuBtns}" HorizontalContentAlignment="Left" x:Name="menubuton_first" Click="menubutton_first_Click" >
                     <DockPanel Width="200" Margin="15,0,0,0">
-                        <Image Source="images/126466-multimedia-collection/avatar.png" Width="32"/>
-                        <Label Content="Horror" Foreground="White" FontSize="16"/>
+                        <Image Source="images/126466-multimedia-collection/trekking.png" Width="27"/>
+                        <Label Content="Adventure" Foreground="White" FontSize="16"/>
                     </DockPanel>
                 </Button>
-                <Button Height="50" Style="{DynamicResource menuBtns}" HorizontalContentAlignment="Left" x:Name="menubuton_second" Click="menubutton_second_Click">
+                <Button Height="35" Margin="15,0"  Style="{DynamicResource menuBtns}" HorizontalContentAlignment="Left" x:Name="menubuton_second" Click="menubutton_second_Click">
                     <DockPanel Width="200" Margin="15,0,0,0">
-                        <Image Source="images/126466-multimedia-collection/avatar.png" Width="32"/>
+                        <Image Source="images/126466-multimedia-collection/film (1).png" Width="27"/>
+                        <Label Content="Action" Foreground="White" FontSize="16"/>
+                    </DockPanel>
+                </Button>
+                <Button Height="35"  Margin="15,0" Style="{DynamicResource menuBtns}" HorizontalContentAlignment="Left" x:Name="menubuton_third" Click="menubutton_third_Click">
+                    <DockPanel Width="200" Margin="15,0,0,0">
+                        <Image Source="images/126466-multimedia-collection/comedy-mask.png" Width="27"/>
                         <Label Content="Comedy" Foreground="White" FontSize="16"/>
                     </DockPanel>
                 </Button>
-                <Button Height="50" Style="{DynamicResource menuBtns}" HorizontalContentAlignment="Left" x:Name="menubuton_third" Click="menubutton_third_Click">
+                <Button Height="35"  Margin="15,0" Style="{DynamicResource menuBtns}" HorizontalContentAlignment="Left" x:Name="menubuton_fourth" Click="menubutton_fourth_Click">
                     <DockPanel Width="200" Margin="15,0,0,0">
-                        <Image Source="images/126466-multimedia-collection/avatar.png" Width="32"/>
-                        <Label Content="Sci-Fi" Foreground="White" FontSize="16"/>
+                        <Image Source="images/126466-multimedia-collection/manager.png" Width="27"/>
+                        <Label Content="Documentary" Foreground="White" FontSize="16"/>
                     </DockPanel>
                 </Button>
-                <Button Height="50" Style="{DynamicResource menuBtns}" HorizontalContentAlignment="Left" x:Name="menubuton_fourth" Click="menubutton_fourth_Click">
+                <Button Height="35"  Margin="15,0" Style="{DynamicResource menuBtns}" HorizontalContentAlignment="Left" x:Name="menubuton_fifth" Click="menubuton_fifth_Click" >
                     <DockPanel Width="200" Margin="15,0,0,0">
-                        <Image Source="images/126466-multimedia-collection/avatar.png" Width="32"/>
-                        <Label Content="Liked" Foreground="White" FontSize="16"/>
+                        <Image Source="images/126466-multimedia-collection/family.png" Width="27"/>
+                        <Label Content="Family" Foreground="White" FontSize="16"/>
                     </DockPanel>
                 </Button>
-                <Button Height="50" Style="{DynamicResource menuBtns}" HorizontalContentAlignment="Left" x:Name="menubuton_admin" Click="menubutton_admin_Click" Visibility="Hidden">
+                <Button Height="35"  Margin="15,0" Style="{DynamicResource menuBtns}" HorizontalContentAlignment="Left" x:Name="menubuton_sixth" Click="menubuton_sixth_Click">
                     <DockPanel Width="200" Margin="15,0,0,0">
-                        <Image Source="images/126466-multimedia-collection/avatar.png" Width="32"/>
-                        <Label Content="Options" Foreground="White" FontSize="16"/>
+                        <Image Source="images/126466-multimedia-collection/elf.png" Width="27"/>
+                        <Label Content="Fantasy" Foreground="White" FontSize="16"/>
                     </DockPanel>
                 </Button>
+                <Button Height="35"  Margin="15,0" Style="{DynamicResource menuBtns}" HorizontalContentAlignment="Left" x:Name="menubuton_seventh" Click="menubuton_seventh_Click">
+                    <DockPanel Width="200" Margin="15,0,0,0">
+                        <Image Source="images/126466-multimedia-collection/ghost.png" Width="27"/>
+                        <Label Content="Horror" Foreground="White" FontSize="16"/>
+                    </DockPanel>
+                </Button>
+                <Button Height="35"  Margin="15,0" Style="{DynamicResource menuBtns}" HorizontalContentAlignment="Left" x:Name="menubuton_eighth" Click="menubuton_eighth_Click">
+                    <DockPanel Width="200" Margin="15,0,0,0">
+                        <Image Source="images/126466-multimedia-collection/film.png" Width="27"/>
+                        <Label Content="Thriller" Foreground="White" FontSize="16"/>
+                    </DockPanel>
+                </Button>
+                <Button Height="35"  Margin="15,0" Style="{DynamicResource menuBtns}" HorizontalContentAlignment="Left" x:Name="menubuton_ninth" Click="menubuton_ninth_Click">
+                    <DockPanel Width="200" Margin="15,0,0,0">
+                        <Image Source="images/126466-multimedia-collection/002-alien.png" Width="27"/>
+                        <Label Content="Scifi" Foreground="White" FontSize="16"/>
+                    </DockPanel>
+                </Button>
+                <Button Height="35" Style="{DynamicResource menuBtns}" HorizontalContentAlignment="Left" x:Name="menubuton_admin" Click="menubutton_admin_Click" Visibility="Hidden">
+                    <DockPanel Width="200" Margin="15,0,0,0">
+                        <Image Source="images/126466-multimedia-collection/settings.png" Width="27"/>
+                        <Label Content="Add new movie" Foreground="White" FontSize="16"/>
+                    </DockPanel>
+                </Button>
+                <Button Background="{x:Null}" BorderBrush="{x:Null}" Click="logout_Click" ><Image Source="images/126466-multimedia-collection/logout.png" Width="27"></Image></Button>
             </StackPanel>
 
         </Border>
@@ -125,7 +156,7 @@
 
                     <Border Background="White"  MouseDown="wnd_move_MouseDown">
                         <DockPanel Width="80" HorizontalAlignment="Right" Margin="0,0,2,0">
-                            <Button Content="__" Style="{DynamicResource miniBtns}" FontSize="12"/>
+                            <Button Content="__" Style="{DynamicResource miniBtns}" FontSize="12" Click="Minimize_Click"/>
                             <Button Content="X"  Style="{DynamicResource miniBtns}" x:Name="btn_close" Click="btn_close_Click" FontSize="12"/>
                         </DockPanel>
                     </Border>

@@ -49,24 +49,24 @@ namespace Movie_Search_Engine
 
         private void menubutton_first_Click(object sender, RoutedEventArgs e)
         {
-Class1.User_Choice(content_inner, new UserControl1());
+Class1.User_Choice(content_inner, new UserControl2());
         }
 
         private void menubutton_second_Click(object sender, RoutedEventArgs e)
         {
-            Class1.User_Choice(content_inner, new UserControl2());
+            Class1.User_Choice(content_inner, new UserControl3());
         }
 
         private void menubutton_third_Click(object sender, RoutedEventArgs e)
         {
          
-                Class1.User_Choice(content_inner, new UserControl3());
+                Class1.User_Choice(content_inner, new UserControl4());
            
         }
 
         private void menubutton_fourth_Click(object sender, RoutedEventArgs e)
         {
-            Class1.User_Choice(content_inner, new UserControl4());
+            Class1.User_Choice(content_inner, new UserControl5());
         }
 
         private void menubuton_home_Loaded(object sender, RoutedEventArgs e)
@@ -82,6 +82,45 @@ Class1.User_Choice(content_inner, new UserControl1());
         private void menubutton_admin_Click(object sender, RoutedEventArgs e)
         {
             Class1.User_Choice(content_inner, new UserControl6());
+        }
+
+        private void menubuton_fifth_Click(object sender, RoutedEventArgs e)
+        {
+            Class1.User_Choice(content_inner, new UserControl7());
+        }
+
+        private void menubuton_sixth_Click(object sender, RoutedEventArgs e)
+        {
+            Class1.User_Choice(content_inner, new UserControl8());
+        }
+
+        private void menubuton_seventh_Click(object sender, RoutedEventArgs e)
+        {
+            Class1.User_Choice(content_inner, new UserControl9());
+        }
+
+        private void menubuton_eighth_Click(object sender, RoutedEventArgs e)
+        {
+            Class1.User_Choice(content_inner, new UserControl10());
+        }
+
+        private void menubuton_ninth_Click(object sender, RoutedEventArgs e)
+        {
+            Class1.User_Choice(content_inner, new UserControl11());
+        }
+
+     
+
+        private void logout_Click(object sender, RoutedEventArgs e)
+        {
+            loginScreen logscr = new loginScreen();
+            logscr.Show();
+            this.Close();
+        }
+
+        private void Minimize_Click(object sender, RoutedEventArgs e)
+        {
+ this.WindowState = WindowState.Minimized;
         }
     }
 }

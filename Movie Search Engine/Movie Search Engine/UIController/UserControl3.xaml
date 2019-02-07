@@ -7,23 +7,22 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition Height="40"/>
 
-            </Grid.RowDefinitions>
-            <Border Grid.Row="0" >
-                <Label Content="comedy"/>
-            </Border>
-            <Border Background="white" Grid.Row="1" >
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                    <Button Content="btn" Width="135" Margin="2,2">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Border>
+            <ScrollViewer  VerticalScrollBarVisibility="Auto">
 
-                    </Button>
+                <StackPanel Name="Category">
+                    <Label HorizontalAlignment="Center" FontSize="24" Content="Action Movies"></Label>
+
+
+
                 </StackPanel>
 
-            </Border>
-        </Grid>
+            </ScrollViewer>
+        </Border>
+
     </Grid>
 </UserControl>

@@ -52,11 +52,11 @@ namespace Movie_Search_Engine
                     SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
                     sqlCmd.CommandType = CommandType.Text;
                     sqlCmd.Parameters.AddWithValue("@Username", txtUsername.Text);
-                    sqlCmd.Parameters.AddWithValue("@Password", txtPassword.Password);
+                  sqlCmd.Parameters.AddWithValue("@Password", txtPassword.Password);
                     
-                    int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
+                    int count =  Convert.ToInt32(sqlCmd.ExecuteScalar());
                     if (count == 1)
-                    {                       
+                    {
                         MainWindow dashboard = new MainWindow(txtUsername.Text);
                         dashboard.Show();
                         this.Close();
@@ -82,6 +82,13 @@ namespace Movie_Search_Engine
             RegisterScreen regScreen = new RegisterScreen();
             regScreen.Show();
             this.Close();
+        }
+
+      
+
+        private void Mnimize_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
         }
     }
 }

@@ -63,6 +63,12 @@
     <Compile Include="UIController\UserControl1.xaml.cs">
       <DependentUpon>UserControl1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UIController\UserControl10.xaml.cs">
+      <DependentUpon>UserControl10.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIController\UserControl11.xaml.cs">
+      <DependentUpon>UserControl11.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UIController\UserControl2.xaml.cs">
       <DependentUpon>UserControl2.xaml</DependentUpon>
     </Compile>
@@ -77,6 +83,15 @@
     </Compile>
     <Compile Include="UIController\UserControl6.xaml.cs">
       <DependentUpon>UserControl6.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIController\UserControl7.xaml.cs">
+      <DependentUpon>UserControl7.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIController\UserControl8.xaml.cs">
+      <DependentUpon>UserControl8.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIController\UserControl9.xaml.cs">
+      <DependentUpon>UserControl9.xaml</DependentUpon>
     </Compile>
     <Page Include="LoginScreen.xaml">
       <SubType>Designer</SubType>
@@ -105,6 +120,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UIController\UserControl10.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIController\UserControl11.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UIController\UserControl2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -122,6 +145,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UIController\UserControl6.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIController\UserControl7.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIController\UserControl8.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIController\UserControl9.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -184,6 +219,39 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\126466-multimedia-collection\magnifying-glass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\126466-multimedia-collection\001-3d-glasses.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\126466-multimedia-collection\002-alien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\126466-multimedia-collection\comedy-mask.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\126466-multimedia-collection\ghost.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\126466-multimedia-collection\film.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\126466-multimedia-collection\elf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\126466-multimedia-collection\family.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\126466-multimedia-collection\manager.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\126466-multimedia-collection\film %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\126466-multimedia-collection\trekking.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\126466-multimedia-collection\logout.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

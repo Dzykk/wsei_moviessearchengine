@@ -32,7 +32,12 @@
                 </Setter.Value>
             </Setter>
         </Style>
-
+        
+        
+ 
+        
+        
+        
         <Style x:Key="menuBtns" TargetType="Button">
             <Setter Property="Foreground" Value="#FF787878"/>
             <Setter Property="Margin" Value="0,0,0,1"/>
@@ -65,5 +70,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        
+        
     </Application.Resources>
 </Application>

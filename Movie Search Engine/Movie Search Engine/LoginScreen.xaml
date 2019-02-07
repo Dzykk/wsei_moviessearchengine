@@ -25,7 +25,7 @@
                     </LinearGradientBrush>
                 </Border.Background>
                 <DockPanel Width="80" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,2,0">
-                    <Button Content="__" Style="{DynamicResource miniBtns}" FontSize="12" />
+                    <Button Content="__" Style="{DynamicResource miniBtns}" FontSize="12" Click="Mnimize_Click" />
                     <Button Content="X"  Style="{DynamicResource miniBtns}" Click="btn_close_Click" FontSize="12" Padding="1" ScrollViewer.CanContentScroll="True" />
                 </DockPanel>
             </Border>
@@ -58,7 +58,7 @@
                         </PasswordBox.Background>
                     </PasswordBox>
 
-                    <Button Name="btnSubmit" Click="btnSubmit_Click" Content="Submit" Padding="2,4,2,8" Margin="60,20,60.6,20" Foreground="Black" FontSize="18" RenderTransformOrigin="0.499,1.14" Height="35" Style="{DynamicResource ButtonStyle1}">
+                    <Button Name="btnSubmit" Click="btnSubmit_Click" Content="Log in" Padding="2,2,2,4" Margin="60,20,60.6,20" Foreground="Black" FontSize="18" RenderTransformOrigin="0.499,1.14" Height="35" Style="{DynamicResource ButtonStyle1}">
                         <Button.Resources>
                             <Style x:Key="FocusVisual">
                                 <Setter Property="Control.Template">
@@ -124,7 +124,8 @@
                             </LinearGradientBrush>
                         </Button.Background>
                     </Button>
-                    <Button Content="Register" Name="Register_btn" Padding="2,4,2,8" Margin="60,20,60.6,20" Foreground="Black" FontSize="18" RenderTransformOrigin="0.499,1.14" Height="35" Click="Register_btn_Click" />
+                    <Button Content="Sign in" Name="Register_btn" Margin="20,5,20,5" Foreground="Black" FontSize="14" RenderTransformOrigin="0.499,1.14" Height="35" Click="Register_btn_Click" Background="{x:Null}" BorderBrush="{x:Null}"  />
+                   
                 </StackPanel>
             </Border>
         </Grid>
