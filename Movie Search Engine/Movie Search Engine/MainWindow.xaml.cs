@@ -1,7 +1,9 @@
 ﻿using Movie_Search_Engine.Menu_Klasy;
 using Movie_Search_Engine.UIController;
+using Search_Engine_Library;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -121,6 +123,13 @@ Class1.User_Choice(content_inner, new UserControl2());
         private void Minimize_Click(object sender, RoutedEventArgs e)
         {
  this.WindowState = WindowState.Minimized;
+        }
+
+     
+
+        private void Search_btn_Click(object sender, RoutedEventArgs e)
+        {
+Class1.User_Choice(content_inner, new UserControl12(txtSearch.Text));
         }
     }
 }

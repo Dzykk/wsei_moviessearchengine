@@ -69,6 +69,9 @@
     <Compile Include="UIController\UserControl11.xaml.cs">
       <DependentUpon>UserControl11.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UIController\UserControl12.xaml.cs">
+      <DependentUpon>UserControl12.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UIController\UserControl2.xaml.cs">
       <DependentUpon>UserControl2.xaml</DependentUpon>
     </Compile>
@@ -125,6 +128,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UIController\UserControl11.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIController\UserControl12.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -176,8 +176,8 @@
                             </TextBox.Background>
                         </TextBox>
 
-                        <Image Source="images/126466-multimedia-collection/magnifying-glass.png" Width="20"/>
-                    </DockPanel>
+                        <Button Click="Search_btn_Click" Background="{x:Null}" BorderBrush="{x:Null}"><Image Source="images/126466-multimedia-collection/magnifying-glass.png" Width="20"/>
+                   </Button> </DockPanel>
                     <Separator></Separator>
                 </StackPanel>
             </Border>
