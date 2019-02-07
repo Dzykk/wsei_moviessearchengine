@@ -34,7 +34,6 @@
         </Border>
         <Border  Grid.Row="1" >
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                
                 <Button Content="Add" Width="135" Margin="2,2" Name="addMovie" Click="addMovie_Click">
 
                 </Button>
