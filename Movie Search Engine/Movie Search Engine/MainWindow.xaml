@@ -148,7 +148,7 @@
                     <ColumnDefinition Width="254*"/>
                     <ColumnDefinition Width="26*"/>
                 </Grid.ColumnDefinitions>
-                <Label Content="Icons made by Gregor Cresnar and smalllikeart and Freepik and Zlatko Najdenovski and DinosoftLabs and Nikita Golubev and turkkub from www.flaticon.com " FontSize="9" Grid.ColumnSpan="4" Margin="1,-13,-1.4,0.6" Background="#FF913219">
+                <Label Content="Icons made by Gregor Cresnar and smalllikeart and Freepik and Zlatko Najdenovski and DinosoftLabs and Nikita Golubev and turkkub from www.flaticon.com " FontSize="9" Grid.ColumnSpan="4" Margin="1,-13,-1.4,0.6" Background="#FFEBD0C8">
                     <Label.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
