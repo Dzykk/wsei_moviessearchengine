@@ -11,12 +11,14 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="170"/>
             <RowDefinition/>
+            <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="210"/>
             <ColumnDefinition/>
+
         </Grid.ColumnDefinitions>
-        <Border Grid.Column="0" Grid.Row="0" Background="#FF008D95"  x:Name="wnd_move" MouseDown="wnd_move_MouseDown">
+        <Border Grid.Column="0" Grid.Row="0" Background="#FF913219"  x:Name="wnd_move" MouseDown="wnd_move_MouseDown">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="200*"/>
@@ -25,6 +27,8 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="35"/>
                     <RowDefinition/>
+
+
                 </Grid.RowDefinitions>
                 <Border Grid.ColumnSpan="2" Margin="0,0,-0.4,0.2">
                     <DockPanel VerticalAlignment="Center" HorizontalAlignment="Center">
@@ -61,7 +65,7 @@
 
 
         </Border>
-        <Border Grid.Column="0" Grid.Row="1" Background="#FF008D95" >
+        <Border Grid.Column="0" Grid.Row="1" Grid.RowSpan="3" Background="#FF913219" >
             <StackPanel >
                 <Button Height="35" Style="{DynamicResource menuBtns}" HorizontalContentAlignment="Left" x:Name="menubuton_home" Click="menubutton_home_Click" Loaded="menubuton_home_Loaded" >
                     <DockPanel Width="200" Margin="15,0,0,0">
@@ -129,8 +133,32 @@
                         <Label Content="Add new movie" Foreground="White" FontSize="16"/>
                     </DockPanel>
                 </Button>
-                <Button Background="{x:Null}" BorderBrush="{x:Null}" Click="logout_Click" ><Image Source="images/126466-multimedia-collection/logout.png" Width="27"></Image></Button>
+                <Button Background="{x:Null}" BorderBrush="{x:Null}" Click="logout_Click" >
+                    <Image Source="images/126466-multimedia-collection/logout.png" Width="27"></Image>
+                </Button>
             </StackPanel>
+
+        </Border>
+
+        <Border Grid.Column="1" Grid.Row="2" Margin="0.4,10.2,0,0" >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="391*"/>
+                    <ColumnDefinition Width="18*"/>
+                    <ColumnDefinition Width="254*"/>
+                    <ColumnDefinition Width="26*"/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Icons made by Gregor Cresnar and smalllikeart and Freepik and Zlatko Najdenovski and DinosoftLabs and Nikita Golubev and turkkub from www.flaticon.com " FontSize="9" Grid.ColumnSpan="4" Margin="1,-13,-1.4,0.6">
+                    <Label.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleX="-10.081"/>
+                            <RotateTransform/>
+                            <TranslateTransform X="2.222"/>
+                        </TransformGroup>
+                    </Label.RenderTransform>
+                </Label>
+            </Grid>
 
         </Border>
         <Grid Grid.Column="1" Grid.Row="0" Grid.RowSpan="2">
@@ -176,8 +204,10 @@
                             </TextBox.Background>
                         </TextBox>
 
-                        <Button Click="Search_btn_Click" Background="{x:Null}" BorderBrush="{x:Null}"><Image Source="images/126466-multimedia-collection/magnifying-glass.png" Width="20"/>
-                   </Button> </DockPanel>
+                        <Button Click="Search_btn_Click" Background="{x:Null}" BorderBrush="{x:Null}">
+                            <Image Source="images/126466-multimedia-collection/magnifying-glass.png" Width="20"/>
+                        </Button>
+                    </DockPanel>
                     <Separator></Separator>
                 </StackPanel>
             </Border>
@@ -187,7 +217,9 @@
                 <Grid x:Name="content_inner">
 
                 </Grid>
+
             </Border>
+
 
         </Grid>
     </Grid>
