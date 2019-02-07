@@ -42,28 +42,11 @@ namespace Movie_Search_Engine.UIController
                
                 if (con.State == ConnectionState.Closed)
                 {                
-                    con.Open();
-                    string path = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"posters\", "default.jpg");
-                    byte[] poster = DataManipulator.GetPoster(path);
-                    string userquery = "SELECT COUNT(*) FROM [dbo].[Movie] WHERE [Title] = @Title";
-                    SqlCommand cmd = new SqlCommand(userquery, con);
-                    cmd.CommandType = CommandType.Text;
-                    cmd.Parameters.Clear();
-                    cmd.Parameters.AddWithValue("@Title", txt1.Text);
-                    int recordscheck = (int)cmd.ExecuteScalar();
+                    con.Open();                  
+                    int recordscheck = DBQueries.CheckExistingMovie(con, txt1.Text);
                     if (recordscheck == 0)
-                    { 
-                        userquery = "INSERT INTO [dbo].[Movie] (Title, Price, ReleaseDate, Genre, [Language], Runtime, Poster) VALUES (@Title, @Price, @ReleaseDate, @Genre, @Language, @Runtime, @Poster)";
-                        cmd.CommandText = userquery;
-                        cmd.Parameters.Clear();
-                        cmd.Parameters.AddWithValue("@Title", txt1.Text);
-                        cmd.Parameters.AddWithValue("@Price", txt2.Text);
-                        cmd.Parameters.AddWithValue("@ReleaseDate", txt3.Text);
-                        cmd.Parameters.AddWithValue("@Genre", txt4.Text);
-                        cmd.Parameters.AddWithValue("@Language", txt5.Text);
-                        cmd.Parameters.AddWithValue("@Runtime", txt6.Text);
-                        cmd.Parameters.Add("Poster", SqlDbType.Image, poster.Length).Value = poster;
-                        cmd.ExecuteNonQuery();
+                    {                       
+                        DBQueries.AddNewMovie(con, txt1.Text, txt2.Text, txt3.Text, txt4.Text, txt5.Text, txt6.Text);
                         MessageBox.Show("Movie added successfully.");
                     }                 
                     else

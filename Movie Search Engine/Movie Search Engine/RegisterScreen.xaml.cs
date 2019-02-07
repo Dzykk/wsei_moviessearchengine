@@ -53,28 +53,16 @@ namespace Movie_Search_Engine
                 {
 
                     con.Open();
-                    SqlCommand cmd = new SqlCommand();
-                    cmd.Connection = con;
-                    cmd.CommandText = "SELECT COUNT(*) FROM[dbo].[Account] WHERE[Login] = @Login";
-                    cmd.Parameters.Clear();
-                    cmd.Parameters.AddWithValue("@Login", txtUsername.Text);
-
-
-                    int usercheck = (int)cmd.ExecuteScalar();
+                    int usercheck = DBQueries.CheckExistingUser(con, txtUsername.Text);                 
                     if (usercheck == 0)
-                    {
-                        cmd.CommandText = "INSERT INTO[dbo].[Account]([Login], [Password], [AccountType] ) VALUES(@Login, @Password, 'AppUser')";
-                        cmd.Parameters.Clear();
-                        cmd.Parameters.AddWithValue("@Login", txtUsername.Text);
-                        cmd.Parameters.AddWithValue("@Password", txtPassword.Password);
-                        cmd.ExecuteNonQuery();
+                    {                     
+                        DBQueries.RegisterNewUser(con, txtUsername.Text, txtPassword.Password);
                         MessageBox.Show("You can now log in!");
                         loginScreen logScreen = new loginScreen();
                         logScreen.Show();
                         this.Close();
                     }
                     else
-
                     {
                         MessageBox.Show("Login already taken!");
                     }

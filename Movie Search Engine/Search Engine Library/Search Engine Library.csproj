@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="Administrator.cs" />
     <Compile Include="DBConnect.cs" />
+    <Compile Include="DBQueries.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="DataManipulator.cs" />
     <Compile Include="Movie.cs" />

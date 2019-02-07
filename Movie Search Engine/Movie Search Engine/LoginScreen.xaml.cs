@@ -41,21 +41,15 @@ namespace Movie_Search_Engine
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-            DBConnect con = new DBConnect();
-            SqlConnection sqlCon = con.Connect();
+            DBConnect dbcon = new DBConnect();
+            SqlConnection con = dbcon.Connect();
             try
             {
-                if (sqlCon.State == ConnectionState.Closed)
+                if (con.State == ConnectionState.Closed)
                 {
-                    sqlCon.Open();
-                    string query = "SELECT COUNT(1) FROM Account WHERE Login=@Username AND Password=@Password";
-                    SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
-                    sqlCmd.CommandType = CommandType.Text;
-                    sqlCmd.Parameters.AddWithValue("@Username", txtUsername.Text);
-                  sqlCmd.Parameters.AddWithValue("@Password", txtPassword.Password);
-                    
-                    int count =  Convert.ToInt32(sqlCmd.ExecuteScalar());
-                    if (count == 1)
+                    con.Open();                  
+                    int usercheck = DBQueries.UserLogIn(con, txtUsername.Text, txtPassword.Password);
+                    if (usercheck == 1)
                     {
                         MainWindow dashboard = new MainWindow(txtUsername.Text);
                         dashboard.Show();
@@ -73,7 +67,7 @@ namespace Movie_Search_Engine
             }
             finally
             {
-                sqlCon.Close();
+                con.Close();
             }
         }
 
