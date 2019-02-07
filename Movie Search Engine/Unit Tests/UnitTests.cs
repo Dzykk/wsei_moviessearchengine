@@ -8,15 +8,12 @@ namespace Unit_Tests
     [TestClass]
     public class UnitTests
     {
-        [DataTestMethod]
-        [DataRow("Admin", "aaa", "Admin", "bbb")]
-        [DataRow("User", "ccc", "User", "ddd")]
-        [DataRow("123456", "aaa", "123456", "bbb")]
-        public void User_Equals(string username, string password, string username2, string password2)
+        [TestMethod]
+        public void User_Equals()
         {
-            User User = new User(username, password);
-            User User2 = new User(username2, password2);
-            Assert.AreEqual(User, User2);
+            User User = new User("Admin", "aaa");
+            User User2 = new User("Admin", "aaa");
+            Assert.AreEqual((Account)User, (Account)User2);
 
         }
 

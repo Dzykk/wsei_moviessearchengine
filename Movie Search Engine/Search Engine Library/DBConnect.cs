@@ -11,11 +11,25 @@ using System.Data.SqlClient;
 
 namespace Search_Engine_Library
 {
+    /// <summary>
+    /// Klasa DBConnect
+    /// Odpowiada za utworzenie połączenia z bazą danych, z którą zintegrowana jest aplikacja.
+    /// </summary>
+    /// <remarks>
+    /// Podczas tworzenia aplikacji korzystano z kilku baz danych. Fizyczna baza danych okazała się niedoskonała, przez co została zamieniona na bazę danych
+    /// na lokalnym serwerze SQL.
+    /// Jednakże by mieć możliwość korzystania z bazy na wielu maszynach, została ona przeniesiona na MS Azure SQL Server.
+    /// </remarks>
     public class DBConnect
     {
         private SqlConnection conn;
         public DBConnect() { }
         
+        /// <summary>
+        /// Metoda Connect()
+        /// Zwraca połączenie z bazą danych, używane do różnych działań związanych z bazą.
+        /// </summary>
+        /// <returns></returns>
         public SqlConnection Connect()
         {
             //conn = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = |DataDirectory|\Database.mdf; Integrated Security = True"); physical db

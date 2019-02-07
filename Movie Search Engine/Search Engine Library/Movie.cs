@@ -10,10 +10,32 @@ using System.Data.Linq.Mapping;
 
 namespace Search_Engine_Library
 {
+    /// <summary>
+    /// Klasa Movie
+    /// Zawiera pola odpowiedzialne za dane dotyczące filmów w aplikacji (ID, Tytuł, Cena, Data Wydania, Gatunek, Język, Czas trwania oraz Plakat)
+    /// </summary>
+    /// <remarks>
+    /// Zawiera implementacje interfejsów IComparable<T> oraz IEquatable<T> w celu porównywania i sortowania filmów.
+    /// W związku z integracją aplikacji z bazą danych, to ona odpowiada za sprawdzenie, czy nie występują powtórzenia.
+    /// Porównywanie jest jednak wykorzystywane w celu wyświetlania filmów w kolejności w interfejsie graficznym.
+    /// Zawiera również przeciążoną metodą ToString();
+    /// </remarks>
     [Table(Name = "Movie")]
     public class Movie : IComparable<Movie>, IEquatable<Movie>
     {
-        
+        public Movie (int id, string title)
+        {
+            this.Id = id;
+            this.Title = title;
+        }
+
+        public Movie(int id, string title, DateTime releasedate)
+        {
+            this.Id = id;
+            this.Title = title;
+            this.Releasedate = releasedate;
+        }
+
         private int id;
         [Column(Name = "MovieID", Storage ="id", IsPrimaryKey = true)]
         public int Id
@@ -124,14 +146,28 @@ namespace Search_Engine_Library
                 this.poster = value;
             }
         }
-
+        /// <summary>
+        /// Dodatkowe pole zawierające przekształcony Plakat z formatu byte[] na Image.
+        /// </summary>
         public Image PosterImage => PosterByteToImage(Poster);
 
         public Movie (){}
 
+        /// <summary>
+        /// Metoda Equals
+        /// Sprawdza tytuł i datę wydania filmów, a następnie zwraca true gdy są takie same, i false gdy się różnią.
+        /// </summary>
+        /// <param name="other">Odpowiada za porównywany film, w formacie Movie</param>
+        /// <returns>Wartość boolowską 0 lub 1</returns>
         public bool Equals(Movie other)
+        {            
+            return (this.Title.Equals(other.Title) && this.Releasedate.Equals(other.Releasedate));              
+        }
+
+        public override bool Equals(Object obj)
         {
-            return (this.id.Equals(other.id));              
+            if (obj == null || !this.GetType().Equals(obj.GetType())) return false;
+            else return (this.Title.Equals(((Movie)obj).Title) && this.Releasedate.Equals(((Movie)obj).Releasedate));            
         }
 
         public static bool Equals(Movie m1, Movie m2)
@@ -149,12 +185,18 @@ namespace Search_Engine_Library
             return !m1.Equals(m2);
         }
 
+        /// <summary>
+        /// Metoda CompareTo
+        /// Najpierw sprawdza tytuły filmów. Jeśli tytuły okażą się być takie same, porównywane są pod kątem ich daty wydania.
+        /// </summary>
+        /// <param name="other">Odpowiada za porównywany film, w formacie Movie</param>
+        /// <returns>Wartość 1 gdy obiekt jest większy, 0 gdy taki sam, -1 gdy mniejszy.</returns>
         public int CompareTo(Movie other)
         {
             if (this.Title.CompareTo(other.Title) > 0) return 1;
             else if (this.Title.CompareTo(other.Title) == 0)
             {
-                return this.releasedate.CompareTo(other.Releasedate);
+                return this.Releasedate.CompareTo(other.Releasedate);
             }
             else return -1;
         }
@@ -176,14 +218,20 @@ namespace Search_Engine_Library
 
         public static bool operator >=(Movie m1, Movie m2)
         {
-            return m1.CompareTo(m2) == 0;
+            return m1.CompareTo(m2) >= 0;
         }
 
         public static bool operator <=(Movie m1, Movie m2)
         {
-            return m1.CompareTo(m2) == 0;
+            return m1.CompareTo(m2) <= 0;
         }
 
+        /// <summary>
+        /// Metoda PosterByteToImage
+        /// Pobiera argument byteposter będący byte[] i przekształca go na Image, który potem wyświetlany będzie w aplikacji.
+        /// </summary>
+        /// <param name="byteposter">Odpowiada za plakat, w formacie byte[]</param>
+        /// <returns>Plakat w formacie Image</returns>
         public Image PosterByteToImage(byte[] byteposter)
         {
             using (MemoryStream mstream = new MemoryStream(byteposter))
@@ -194,7 +242,7 @@ namespace Search_Engine_Library
 
         public override string ToString()
         {
-            return Title + ", released on " + Releasedate + ", " + Genre;
+            return Title;
         }
     }
 }

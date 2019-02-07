@@ -15,7 +15,15 @@ namespace Search_Engine_Library
 {
     public class DataManipulator
     {
-
+        /// <summary>
+        /// Metoda GetMovieData
+        /// Służy do tworzenia tabeli danych zawierających filmy.
+        /// </summary>
+        /// <remarks>
+        /// Korzystając z metody DBConnect.Connect(), otwierane jest połączenie i tworzona kwerenda, która pobiera dane o filmach z bazy danych.
+        /// Dane następnie ładowane są do tabeli danych, połączenie zamykane, wypełniona tabela zwracana jako wynik metody.
+        /// </remarks>
+        /// <returns>Tabela danych z filmami.</returns>
         public static DataTable GetMovieData()
         {
             DBConnect dbcon = new DBConnect();
@@ -29,7 +37,15 @@ namespace Search_Engine_Library
             con.Close();
             return moviedt;
         }
-
+        /// <summary>
+        /// Metoda GetUserData
+        /// Służy do tworzenia tabeli danych zawierających użytkoników aplikacji.
+        /// </summary>
+        /// <remarks>
+        /// Korzystając z metody DBConnect.Connect(), otwierane jest połączenie i tworzona kwerenda, która pobiera dane o użytkownikach z bazy danych.
+        /// Dane następnie ładowane są do tabeli danych, połączenie zamykane, wypełniona tabela zwracana jako wynik metody.
+        /// </remarks>
+        /// <returns>Tabela danych z użytkownikami.</returns>
         public static DataTable GetUserData()
         {
             DBConnect dbcon = new DBConnect();
@@ -44,6 +60,14 @@ namespace Search_Engine_Library
             return userdt;
         }
 
+        /// <summary>
+        /// Lista MovieList
+        /// Tworzona z danych z tabeli danych stworzonej w metodzie GetMovieData().
+        /// </summary>
+        /// <remarks>
+        /// Pobierane są poszczególne wiersze z tabeli danych, a następnie tworzone są nowe obiekty typu Movie i dodawane są do Listy
+        /// w celu późniejszego wykorzystania i łatwości dostępu.
+        /// </remarks>
         public List<Movie> MovieList = (DataManipulator.GetMovieData()).AsEnumerable().Select(row =>
        new Movie
        {
@@ -58,12 +82,26 @@ namespace Search_Engine_Library
        }
         ).ToList();   
         
-
+        /// <summary>
+        /// Metoda ParseEnum<T>
+        /// Służy do przekonwertowywania wartości (np. string) na odpowiadającą im wartość Enumeratora. Używana przy dodawaniu filmów do MovieList.
+        /// </summary>
+        /// <param name="value">Wartość enumeratora, w formacie string</param>
+        /// <returns>Enumerator odpowiedniego typu.</returns>
         public static T ParseEnum<T>(string value)
         {
             return (T)Enum.Parse(typeof(T), value, ignoreCase: true);
         }
 
+        /// <summary>
+        /// Metoda GetPoster
+        /// Służy do pobierania plakatu z danej lokacji z dysku.
+        /// </summary>
+        /// <remarks>
+        /// Wykorzystana głównie do załadowania plakatu-zamiennika do nowo dodawanych filmów z poziomu aplikacji.
+        /// </remarks>
+        /// <param name="path">Lokalizacja pliku, w formacie string</param>
+        /// <returns>Plakat, w formacie byte[]</returns>
         public static byte[] GetPoster(string path)
         {
             FileStream stream = new FileStream(path, FileMode.Open, FileAccess.Read);
@@ -72,7 +110,6 @@ namespace Search_Engine_Library
             reader.Close();
             stream.Close();
             return poster;
-
         }
 
 

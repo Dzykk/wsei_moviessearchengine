@@ -10,6 +10,13 @@ using System.Data.Linq.Mapping;
 
 namespace Search_Engine_Library
 {
+    /// <summary>
+    /// Klasa Administrator
+    /// Dziedziczy po klasie abstrakcyjnej Account.
+    /// </summary>
+    /// <remarks>
+    /// Dodatkowo zawiera pole przechowujące rodzaj użytkownika (jako Enum) oraz metodę przeciążoną ToString().
+    /// </remarks>
     [Table(Name = "Account")]
     class Administrator : Account
     {

@@ -12,9 +12,23 @@ using System.Data.SqlClient;
 
 namespace Search_Engine_Library
 {
+    /// <summary>
+    /// Klasa User
+    /// Dziedziczy po klasie abstrakcyjnej Account.
+    /// </summary>
+    /// <remarks>
+    /// Dodatkowo zawiera pole przechowujące rodzaj użytkownika (jako Enum) oraz metodę przeciążoną ToString().
+    /// Posiada konstruktor dwuargumentowy na wypadek konieczności sztucznego utworzenia użytkownika.
+    /// </remarks>
     [Table(Name = "Account")]
     public class User : Account
     {
+        /// <summary>
+        /// Konstruktor dwuargumentowy
+        /// Tworzy użytkownika z podanego loginu oraz hasła, przypisując mu z góry rodzaj użytkownika AppUser.
+        /// </summary>
+        /// <param name="login">Odpowiada za login, w formacie string</param>
+        /// <param name="password">Odpowiada za hasło, w formacie string</param>
         public User (string login, string password)
         {
             this.login = login;
