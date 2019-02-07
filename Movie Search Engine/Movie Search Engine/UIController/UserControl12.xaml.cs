@@ -29,7 +29,7 @@ namespace Movie_Search_Engine.UIController
             DataManipulator movies = new DataManipulator();
             for (int i = 0; i < movies.MovieList.Count; i++)
             {
-                if (movies.MovieList[i].Title.ToString().ToLower().Contains(text)|| movies.MovieList[i].Genre.ToString().Contains(text) || movies.MovieList[i].Language.ToString().Contains(text))
+                if (movies.MovieList[i].Title.ToString().ToLower().Contains(text)|| movies.MovieList[i].Genre.ToString().ToLower().Contains(text) || movies.MovieList[i].Language.ToString().ToLower().Contains(text))
                 {
 
 

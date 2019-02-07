@@ -129,7 +129,7 @@ Class1.User_Choice(content_inner, new UserControl2());
 
         private void Search_btn_Click(object sender, RoutedEventArgs e)
         {
-Class1.User_Choice(content_inner, new UserControl12(txtSearch.Text));
+Class1.User_Choice(content_inner, new UserControl12(txtSearch.Text.ToLower()));
         }
     }
 }
