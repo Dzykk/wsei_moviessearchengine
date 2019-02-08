@@ -20,6 +20,9 @@ namespace Movie_Search_Engine.UIController
     /// <summary>
     /// Logika interakcji dla klasy UserControl12.xaml
     /// </summary>
+    /// <remarks>
+    /// Pobiera tekst wpisany w TextBox Name="txtSearch" i wyszukuje w liście movies filmów, które zawierają w sobie taki tekst
+    /// </remarks>
     public partial class UserControl12 : UserControl
     {
         public UserControl12(string text)

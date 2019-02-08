@@ -20,6 +20,9 @@ namespace Movie_Search_Engine.UIController
     /// <summary>
     /// Logika interakcji dla klasy UserControl3.xaml
     /// </summary>
+    /// <remarks>
+    /// Wyświetla filmy z kategorii Action w interfejsie graficznym
+    /// </remarks>
     public partial class UserControl3 : UserControl
     {
         public UserControl3()

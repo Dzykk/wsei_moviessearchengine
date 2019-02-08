@@ -29,11 +29,14 @@ namespace Movie_Search_Engine.UIController
         public byte[] ImageToByte { get; set; }
 
     }
- 
+
 
     /// <summary>
     /// Logika interakcji dla klasy UserControl1.xaml
     /// </summary>
+    /// <remarks>
+    /// Wyświetla wszystkie filmy w interfejsie graficznym
+    /// </remarks>
     public partial class UserControl1 : UserControl
     {
         public UserControl1()

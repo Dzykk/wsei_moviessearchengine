@@ -19,7 +19,12 @@ namespace Movie_Search_Engine
 {
     /// <summary>
     /// Logika interakcji dla klasy loginScreen.xaml
+    /// Zawiera przycisk przechodzący do strony rejestracji
     /// </summary>
+    /// <remarks>
+    /// Przekazuje dane wpisane do logowania w celu sprawdzenia poprawności danych
+    /// Po logowaniu wyłącza bieżące okno i włącza MainWindow lub RegisterScreen
+    /// </remarks>
     public partial class loginScreen : Window
     {
 

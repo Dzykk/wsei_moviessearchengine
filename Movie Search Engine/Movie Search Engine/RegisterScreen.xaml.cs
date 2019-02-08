@@ -20,6 +20,10 @@ namespace Movie_Search_Engine
     /// <summary>
     /// Logika interakcji dla klasy RegisterScreen.xaml
     /// </summary>
+    /// <remarks>
+    /// Przekazuje dane wpisane do rejestracji w celu dodania nowego użytkownika
+    /// Po rejestracji wyłącza bieżące okno i włącza LoginScreen
+    /// </remarks>
     public partial class RegisterScreen : Window
     {
 

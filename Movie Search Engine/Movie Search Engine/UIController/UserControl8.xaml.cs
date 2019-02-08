@@ -20,6 +20,9 @@ namespace Movie_Search_Engine.UIController
     /// <summary>
     /// Logika interakcji dla klasy UserControl8.xaml
     /// </summary>
+   /// <remarks>
+    /// Wyświetla filmy z kategorii Fantasy w interfejsie graficznym
+    /// </remarks>
     public partial class UserControl8 : UserControl
     {
         public UserControl8()

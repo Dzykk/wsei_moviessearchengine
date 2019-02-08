@@ -20,6 +20,9 @@ namespace Movie_Search_Engine.UIController
     /// <summary>
     /// Logika interakcji dla klasy UserControl2.xaml
     /// </summary>
+    /// <remarks>
+    /// Wyświetla filmy z kategorii Adventure w interfejsie graficznym
+    /// </remarks>
     public partial class UserControl2 : UserControl
     {
         public UserControl2()

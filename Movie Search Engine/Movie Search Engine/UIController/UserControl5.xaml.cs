@@ -20,6 +20,9 @@ namespace Movie_Search_Engine.UIController
     /// <summary>
     /// Logika interakcji dla klasy UserControl5.xaml
     /// </summary>
+    /// <remarks>
+    /// Wyświetla filmy z kategorii Documentary w interfejsie graficznym
+    /// </remarks>
     public partial class UserControl5 : UserControl
     {
         public UserControl5()

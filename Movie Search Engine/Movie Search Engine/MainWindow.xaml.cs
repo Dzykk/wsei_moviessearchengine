@@ -22,6 +22,11 @@ namespace Movie_Search_Engine
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// <remarks>
+    /// W zależności od tego, ktory przycisk został naciśnięty przełącza pomiędzy okienkami 
+    /// W przypadku gdy zalogował sie Administrator udostępnia dodatkowe funkcje
+    /// Umożliwia wylogowanie sie, czyli wyłączenie bieżącego okienka i włączenie LoginScreen
+    /// </remarks>
     public partial class MainWindow : Window
     {
         public MainWindow(string Username)

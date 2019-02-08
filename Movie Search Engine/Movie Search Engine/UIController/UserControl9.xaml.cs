@@ -20,6 +20,9 @@ namespace Movie_Search_Engine.UIController
     /// <summary>
     /// Logika interakcji dla klasy UserControl9.xaml
     /// </summary>
+    /// <remarks>
+    /// Wyświetla filmy z kategorii Horror w interfejsie graficznym
+    /// </remarks>
     public partial class UserControl9 : UserControl
     {
         public UserControl9()

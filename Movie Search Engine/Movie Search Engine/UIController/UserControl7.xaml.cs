@@ -20,6 +20,9 @@ namespace Movie_Search_Engine.UIController
     /// <summary>
     /// Logika interakcji dla klasy UserControl7.xaml
     /// </summary>
+  /// <remarks>
+    /// Wyświetla filmy z kategorii Family w interfejsie graficznym
+    /// </remarks>
     public partial class UserControl7 : UserControl
     {
         public UserControl7()

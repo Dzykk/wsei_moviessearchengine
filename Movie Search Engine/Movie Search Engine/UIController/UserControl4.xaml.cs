@@ -20,6 +20,9 @@ namespace Movie_Search_Engine.UIController
     /// <summary>
     /// Logika interakcji dla klasy UserControl4.xaml
     /// </summary>
+   /// <remarks>
+    /// Wyświetla filmy z kategorii Comedy w interfejsie graficznym
+    /// </remarks>
     public partial class UserControl4 : UserControl
     {
         public UserControl4()

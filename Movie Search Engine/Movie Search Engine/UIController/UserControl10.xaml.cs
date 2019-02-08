@@ -20,6 +20,9 @@ namespace Movie_Search_Engine.UIController
     /// <summary>
     /// Logika interakcji dla klasy UserControl10.xaml
     /// </summary>
+   /// <remarks>
+    /// Wyświetla filmy z kategorii Thriller w interfejsie graficznym
+    /// </remarks>
     public partial class UserControl10 : UserControl
     {
         public UserControl10()

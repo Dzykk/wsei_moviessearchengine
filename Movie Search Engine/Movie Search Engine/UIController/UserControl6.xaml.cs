@@ -22,6 +22,9 @@ namespace Movie_Search_Engine.UIController
     /// <summary>
     /// Logika interakcji dla klasy UserControl6.xaml
     /// </summary>
+    /// <remarks>
+    /// Przekazuje wpisane w TextBox dane w celu utworzenia nowego filmu
+    /// </remarks>
     public partial class UserControl6 : UserControl
     {
         public UserControl6()

@@ -20,6 +20,9 @@ namespace Movie_Search_Engine.UIController
     /// <summary>
     /// Logika interakcji dla klasy UserControl11.xaml
     /// </summary>
+    /// <remarks>
+    /// Wyświetla filmy z kategorii Scifi w interfejsie graficznym
+    /// </remarks>
     public partial class UserControl11 : UserControl
     {
         public UserControl11()
