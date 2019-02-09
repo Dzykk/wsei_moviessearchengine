@@ -1,0 +1,352 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DataManipulator
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DataManipulator
+   ">
+    <meta name="generator" content="docfx 2.40.10.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Search_Engine_Library.DataManipulator">
+  
+  
+  <h1 id="Search_Engine_Library_DataManipulator" data-uid="Search_Engine_Library.DataManipulator" class="text-break">Class DataManipulator
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">DataManipulator</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Search_Engine_Library.html">Search_Engine_Library</a></h6>
+  <h6><strong>Assembly</strong>: Search Engine Library.dll</h6>
+  <h5 id="Search_Engine_Library_DataManipulator_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DataManipulator</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Search_Engine_Library_DataManipulator_MovieList" data-uid="Search_Engine_Library.DataManipulator.MovieList">MovieList</h4>
+  <div class="markdown level1 summary"><p>Lista MovieList
+Tworzona z danych z tabeli danych stworzonej w metodzie GetMovieData().</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;Movie&gt; MovieList</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="Search_Engine_Library.Movie.html">Movie</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Search_Engine_Library_DataManipulator_MovieList_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Pobierane są poszczególne wiersze z tabeli danych, a następnie tworzone są nowe obiekty typu Movie i dodawane są do Listy
+w celu późniejszego wykorzystania i łatwości dostępu.</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Search_Engine_Library_DataManipulator_GetMovieData_" data-uid="Search_Engine_Library.DataManipulator.GetMovieData*"></a>
+  <h4 id="Search_Engine_Library_DataManipulator_GetMovieData" data-uid="Search_Engine_Library.DataManipulator.GetMovieData">GetMovieData()</h4>
+  <div class="markdown level1 summary"><p>Metoda GetMovieData
+Służy do tworzenia tabeli danych zawierających filmy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DataTable GetMovieData()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.DataTable</span></td>
+        <td><p>Tabela danych z filmami.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Search_Engine_Library_DataManipulator_GetMovieData_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Korzystając z metody DBConnect.Connect(), otwierane jest połączenie i tworzona kwerenda, która pobiera dane o filmach z bazy danych.
+Dane następnie ładowane są do tabeli danych, połączenie zamykane, wypełniona tabela zwracana jako wynik metody.</p>
+</div>
+  
+  
+  <a id="Search_Engine_Library_DataManipulator_GetPoster_" data-uid="Search_Engine_Library.DataManipulator.GetPoster*"></a>
+  <h4 id="Search_Engine_Library_DataManipulator_GetPoster_System_String_" data-uid="Search_Engine_Library.DataManipulator.GetPoster(System.String)">GetPoster(String)</h4>
+  <div class="markdown level1 summary"><p>Metoda GetPoster
+Służy do pobierania plakatu z danej lokacji z dysku.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static byte[] GetPoster(string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>Lokalizacja pliku, w formacie string</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><p>Plakat, w formacie byte[]</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Search_Engine_Library_DataManipulator_GetPoster_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Wykorzystana głównie do załadowania plakatu-zamiennika do nowo dodawanych filmów z poziomu aplikacji.</p>
+</div>
+  
+  
+  <a id="Search_Engine_Library_DataManipulator_GetUserData_" data-uid="Search_Engine_Library.DataManipulator.GetUserData*"></a>
+  <h4 id="Search_Engine_Library_DataManipulator_GetUserData" data-uid="Search_Engine_Library.DataManipulator.GetUserData">GetUserData()</h4>
+  <div class="markdown level1 summary"><p>Metoda GetUserData
+Służy do tworzenia tabeli danych zawierających użytkoników aplikacji.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DataTable GetUserData()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.DataTable</span></td>
+        <td><p>Tabela danych z użytkownikami.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Search_Engine_Library_DataManipulator_GetUserData_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Korzystając z metody DBConnect.Connect(), otwierane jest połączenie i tworzona kwerenda, która pobiera dane o użytkownikach z bazy danych.
+Dane następnie ładowane są do tabeli danych, połączenie zamykane, wypełniona tabela zwracana jako wynik metody.</p>
+</div>
+  
+  
+  <a id="Search_Engine_Library_DataManipulator_ParseEnum_" data-uid="Search_Engine_Library.DataManipulator.ParseEnum*"></a>
+  <h4 id="Search_Engine_Library_DataManipulator_ParseEnum__1_System_String_" data-uid="Search_Engine_Library.DataManipulator.ParseEnum``1(System.String)">ParseEnum&lt;T&gt;(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ParseEnum&lt;T&gt;(string value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

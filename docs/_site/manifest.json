@@ -1,0 +1,478 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/Dzykk/Source/Repos/Dzykk/wsei_moviessearchengine/Documentation",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Movie_Search_Engine.App.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Movie_Search_Engine.App.html",
+          "hash": "5H2b3y3bpJMY9pH4rPYmFQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Movie_Search_Engine.MainWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Movie_Search_Engine.MainWindow.html",
+          "hash": "QN2llZd8cmj+gSUNp8nuRQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Movie_Search_Engine.RegisterScreen.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Movie_Search_Engine.RegisterScreen.html",
+          "hash": "Yg8TcJxhkSR9RsRwblwkJA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Movie_Search_Engine.UIController.ImageClass.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Movie_Search_Engine.UIController.ImageClass.html",
+          "hash": "KqD8nd110Y4C3UQFHtwlzQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Movie_Search_Engine.UIController.UserControl1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Movie_Search_Engine.UIController.UserControl1.html",
+          "hash": "5tvsF+43itEyJs6I8p5SfQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Movie_Search_Engine.UIController.UserControl10.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Movie_Search_Engine.UIController.UserControl10.html",
+          "hash": "XkTny6fRWzh+GJ0yqpi3ow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Movie_Search_Engine.UIController.UserControl11.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Movie_Search_Engine.UIController.UserControl11.html",
+          "hash": "OsgBX1EVeXa3en4wsRStqQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Movie_Search_Engine.UIController.UserControl12.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Movie_Search_Engine.UIController.UserControl12.html",
+          "hash": "2iNNMhFswXjJ6CX0rTQ9Vw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Movie_Search_Engine.UIController.UserControl2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Movie_Search_Engine.UIController.UserControl2.html",
+          "hash": "m3kDzIp8QnwoqJT+Y8QreQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Movie_Search_Engine.UIController.UserControl3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Movie_Search_Engine.UIController.UserControl3.html",
+          "hash": "XLzyfSvfVrWeIvaq9ix5eg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Movie_Search_Engine.UIController.UserControl4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Movie_Search_Engine.UIController.UserControl4.html",
+          "hash": "e9RCxCKoDcQEw5VOlVmS+w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Movie_Search_Engine.UIController.UserControl5.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Movie_Search_Engine.UIController.UserControl5.html",
+          "hash": "iQSlz2QYgAesh90OoFIbCA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Movie_Search_Engine.UIController.UserControl6.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Movie_Search_Engine.UIController.UserControl6.html",
+          "hash": "knPsvU6OpWbM4fXJ3BJe0A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Movie_Search_Engine.UIController.UserControl7.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Movie_Search_Engine.UIController.UserControl7.html",
+          "hash": "LdTwDNCverxypPQcZkB7qw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Movie_Search_Engine.UIController.UserControl8.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Movie_Search_Engine.UIController.UserControl8.html",
+          "hash": "Cwz3qws2RK8+ykCgowCLbg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Movie_Search_Engine.UIController.UserControl9.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Movie_Search_Engine.UIController.UserControl9.html",
+          "hash": "SllZavzVIJh5hSf/x0G57A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Movie_Search_Engine.UIController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Movie_Search_Engine.UIController.html",
+          "hash": "6/fHfYwqkr0Aewm+hwyDRw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Movie_Search_Engine.loginScreen.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Movie_Search_Engine.loginScreen.html",
+          "hash": "+sRyMR1HofZ31F4776oLGA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Movie_Search_Engine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Movie_Search_Engine.html",
+          "hash": "LjDNbA6HNzqsuTYtdCEQcw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Search_Engine_Library.Account.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Search_Engine_Library.Account.html",
+          "hash": "kV+bPzYTtOss60FDWa1tpQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Search_Engine_Library.DBConnect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Search_Engine_Library.DBConnect.html",
+          "hash": "KVaWPBEnfDQ5zwhyW+dx8w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Search_Engine_Library.DBQueries.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Search_Engine_Library.DBQueries.html",
+          "hash": "C7n0L2ZY/2KAoDcMQSaxSw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Search_Engine_Library.DataManipulator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Search_Engine_Library.DataManipulator.html",
+          "hash": "YmlJSyw9dCnrpqmdvuMfZQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Search_Engine_Library.Genre.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Search_Engine_Library.Genre.html",
+          "hash": "5rW5Mcdl2DfSLBd01kYZeA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Search_Engine_Library.Language.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Search_Engine_Library.Language.html",
+          "hash": "ZRMm36faW2/M3sYsWTpW6g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Search_Engine_Library.Movie.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Search_Engine_Library.Movie.html",
+          "hash": "XQvhxewW4TzNZCQOwxG+Uw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Search_Engine_Library.Privilege.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Search_Engine_Library.Privilege.html",
+          "hash": "BF7QcPB2m1SASx3W74zAFQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Search_Engine_Library.User.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Search_Engine_Library.User.html",
+          "hash": "T4tpaTPKRZAw+n6FDqPnkQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Search_Engine_Library.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Search_Engine_Library.html",
+          "hash": "vINi5Ea9PgUN0+olEUjD+g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "Pfc68PJffbGvLB14MuoywA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "UidNotFound"
+      ],
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "EPyJxGbnsxPq3e+B0kYRdQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "skNqwyRadziCi1fjy+8dNg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "t7iiFrmuYmrKWisdq+lN6Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "xd4mfBvGc4uRJP+W/lrecw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "k+/dkjFuwAVS32HduMpmBw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 29,
+          "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
