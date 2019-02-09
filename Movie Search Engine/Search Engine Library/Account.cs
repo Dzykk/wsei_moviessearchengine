@@ -10,6 +10,8 @@ using System.Data.Linq.Mapping;
 
 namespace Search_Engine_Library
 {
+
+    [Table(Name = "Account")]
     /// <summary>
     /// Klasa Abstrakcyjna Account
     /// Zawiera pola odpowiedzialne za dane użytkowników aplikacji (Login, Hasło)
@@ -18,7 +20,6 @@ namespace Search_Engine_Library
     /// Zawiera implementacje  Interfejsów IComparable<T> oraz IEquatable<T> w celu porównywania ze sobą użytkowników.
     /// W związku z integracją aplikacji z bazą danych, wszelkie dane pobierane są z bazy, a jej budowa odpowiada za brak powtórzeń i sortowanie.
     /// </remarks>
-    [Table(Name = "Account")]
     public abstract class Account : IComparable<Account>, IEquatable<Account>
     {     
 

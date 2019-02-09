@@ -10,6 +10,8 @@ using System.Data.Linq.Mapping;
 
 namespace Search_Engine_Library
 {
+
+    [Table(Name = "Movie")]
     /// <summary>
     /// Klasa Movie
     /// Zawiera pola odpowiedzialne za dane dotyczące filmów w aplikacji (ID, Tytuł, Cena, Data Wydania, Gatunek, Język, Czas trwania oraz Plakat)
@@ -20,7 +22,6 @@ namespace Search_Engine_Library
     /// Porównywanie jest jednak wykorzystywane w celu wyświetlania filmów w kolejności w interfejsie graficznym.
     /// Zawiera również przeciążoną metodą ToString();
     /// </remarks>
-    [Table(Name = "Movie")]
     public class Movie : IComparable<Movie>, IEquatable<Movie>
     {
         public Movie (int id, string title)

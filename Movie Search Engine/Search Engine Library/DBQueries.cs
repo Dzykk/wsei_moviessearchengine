@@ -8,7 +8,14 @@ using System.Data.SqlClient;
 
 namespace Search_Engine_Library
 {
-   public class DBQueries
+    /// <summary>
+    /// Klasa DBQueries
+    /// Zawiera metody odpowiadające za logikę konkretnych funkcji aplikacji.
+    /// </summary>
+    /// <remarks>
+    /// W swoim ceiele posiada metody odpowiedzialne za działanie takich funkcji, jak logowanie, rejestracja, czy dodawanie nowych filmów bezpośrednio do bazy danych z poziomu samej aplikacji.
+    /// </remarks>
+    public class DBQueries
     {
         /// <summary>
         /// Metoda statyczna CheckExistingUser

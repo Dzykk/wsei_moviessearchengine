@@ -13,6 +13,15 @@ using System.Drawing;
 
 namespace Search_Engine_Library
 {
+
+    /// <summary>
+    /// Klasa DataManipulator
+    /// Zawiera metody odpowiedzialne za pozyskiwanie z danych z bazy.
+    /// </summary>   
+    /// <remarks>
+    /// Posiada w swoim ciele metody służące do pozyskiwania danych o filmach oraz użytkownikach z bazy danych, listę z obiektami typu Movie, a także metodę do pozyskiwania plakatu filmu z konkretnej wskazanej ścieżki
+    /// oraz metodę służącą do przekonwertowywania innych typów na dany enumerator.
+    /// </remarks>
     public class DataManipulator
     {
         /// <summary>

@@ -12,6 +12,8 @@ using System.Data.SqlClient;
 
 namespace Search_Engine_Library
 {
+
+    [Table(Name = "Account")]
     /// <summary>
     /// Klasa User
     /// Dziedziczy po klasie abstrakcyjnej Account.
@@ -20,7 +22,6 @@ namespace Search_Engine_Library
     /// Dodatkowo zawiera pole przechowujące rodzaj użytkownika (jako Enum) oraz metodę przeciążoną ToString().
     /// Posiada konstruktor dwuargumentowy na wypadek konieczności sztucznego utworzenia użytkownika.
     /// </remarks>
-    [Table(Name = "Account")]
     public class User : Account
     {
         /// <summary>
