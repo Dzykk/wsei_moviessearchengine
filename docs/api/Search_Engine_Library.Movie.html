@@ -73,7 +73,9 @@
   
   <h1 id="Search_Engine_Library_Movie" data-uid="Search_Engine_Library.Movie" class="text-break">Class Movie
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Klasa Movie
+Zawiera pola odpowiedzialne za dane dotyczące filmów w aplikacji.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -107,9 +109,14 @@
   <h6><strong>Assembly</strong>: Search Engine Library.dll</h6>
   <h5 id="Search_Engine_Library_Movie_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Table(Name = &quot;Movie&quot;)]
-public class Movie : IComparable&lt;Movie&gt;, IEquatable&lt;Movie&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class Movie : IComparable&lt;Movie&gt;, IEquatable&lt;Movie&gt;</code></pre>
   </div>
+  <h5 id="Search_Engine_Library_Movie_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Zawiera implementacje interfejsów IComparable oraz IEquatable w celu porównywania i sortowania filmów.
+W związku z integracją aplikacji z bazą danych, to ona odpowiada za sprawdzenie, czy nie występują powtórzenia.
+Porównywanie jest jednak wykorzystywane w celu wyświetlania filmów w kolejności w interfejsie graficznym.
+Zawiera również przeciążoną metodą ToString;</p>
+</div>
   <h3 id="constructors">Constructors
   </h3>
   
@@ -201,8 +208,7 @@ public class Movie : IComparable&lt;Movie&gt;, IEquatable&lt;Movie&gt;</code></p
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Column(Name = &quot;Genre&quot;, Storage = &quot;genre&quot;, CanBeNull = true)]
-public Genre Genre { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Genre Genre { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -227,8 +233,7 @@ public Genre Genre { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Column(Name = &quot;MovieID&quot;, Storage = &quot;id&quot;, IsPrimaryKey = true)]
-public int Id { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int Id { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -253,8 +258,7 @@ public int Id { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Column(Name = &quot;Language&quot;, Storage = &quot;language&quot;, CanBeNull = true)]
-public Language Language { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Language Language { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -279,8 +283,7 @@ public Language Language { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Column(Name = &quot;Poster&quot;, Storage = &quot;poster&quot;, CanBeNull = true)]
-public byte[] Poster { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public byte[] Poster { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -331,8 +334,7 @@ public byte[] Poster { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Column(Name = &quot;Price&quot;, Storage = &quot;price&quot;, CanBeNull = true)]
-public string Price { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Price { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -357,8 +359,7 @@ public string Price { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Column(Name = &quot;ReleaseDate&quot;, Storage = &quot;releasedate&quot;, CanBeNull = true)]
-public DateTime Releasedate { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public DateTime Releasedate { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -383,8 +384,7 @@ public DateTime Releasedate { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Column(Name = &quot;Runtime&quot;, Storage = &quot;runtime&quot;, CanBeNull = true)]
-public string Runtime { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Runtime { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -409,8 +409,7 @@ public string Runtime { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Column(Name = &quot;Title&quot;, Storage = &quot;title&quot;, CanBeNull = false)]
-public string Title { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Title { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

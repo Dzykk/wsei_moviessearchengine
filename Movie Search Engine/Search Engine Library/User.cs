@@ -11,15 +11,13 @@ using System.Data;
 using System.Data.SqlClient;
 
 namespace Search_Engine_Library
-{
-
-    [Table(Name = "Account")]
+{   
     /// <summary>
     /// Klasa User
     /// Dziedziczy po klasie abstrakcyjnej Account.
     /// </summary>
     /// <remarks>
-    /// Dodatkowo zawiera pole przechowujące rodzaj użytkownika (jako Enum) oraz metodę przeciążoną ToString().
+    /// Dodatkowo zawiera pole przechowujące rodzaj użytkownika jako enumerator oraz metodę przeciążoną ToString.
     /// Posiada konstruktor dwuargumentowy na wypadek konieczności sztucznego utworzenia użytkownika.
     /// </remarks>
     public class User : Account
@@ -36,7 +34,7 @@ namespace Search_Engine_Library
             this.password = password;
             this.privileges = Privilege.AppUser;
         }
-        [Column(Name = "AccountType", Storage = "privileges", IsPrimaryKey = false)]
+       
         protected Privilege privileges
         {
             set

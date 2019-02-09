@@ -11,20 +11,19 @@ using System.Data.Linq.Mapping;
 namespace Search_Engine_Library
 {
 
-    [Table(Name = "Account")]
+    
     /// <summary>
     /// Klasa Abstrakcyjna Account
-    /// Zawiera pola odpowiedzialne za dane użytkowników aplikacji (Login, Hasło)
+    /// Zawiera pola odpowiedzialne za dane użytkowników aplikacji.
     /// </summary>
     /// <remarks>
-    /// Zawiera implementacje  Interfejsów IComparable<T> oraz IEquatable<T> w celu porównywania ze sobą użytkowników.
+    /// Zawiera implementacje interfejsów IComparable oraz IEquatable w celu porównywania ze sobą użytkowników.
     /// W związku z integracją aplikacji z bazą danych, wszelkie dane pobierane są z bazy, a jej budowa odpowiada za brak powtórzeń i sortowanie.
     /// </remarks>
     public abstract class Account : IComparable<Account>, IEquatable<Account>
     {     
 
         protected string login;
-        [Column(Name = "Login", Storage = "login", IsPrimaryKey = false)]
         public string Login
         {
             get
@@ -36,7 +35,7 @@ namespace Search_Engine_Library
                 this.login = value;
             }
         }
-        [Column(Name = "Password", Storage = "password", IsPrimaryKey = false)]
+        
         protected string password
         {
             set

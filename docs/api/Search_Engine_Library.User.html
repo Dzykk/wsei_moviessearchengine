@@ -134,11 +134,10 @@ Dziedziczy po klasie abstrakcyjnej Account.</p>
   <h6><strong>Assembly</strong>: Search Engine Library.dll</h6>
   <h5 id="Search_Engine_Library_User_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Table(Name = &quot;Account&quot;)]
-public class User : Account, IComparable&lt;Account&gt;, IEquatable&lt;Account&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class User : Account, IComparable&lt;Account&gt;, IEquatable&lt;Account&gt;</code></pre>
   </div>
   <h5 id="Search_Engine_Library_User_remarks"><strong>Remarks</strong></h5>
-  <div class="markdown level0 remarks"><p>Dodatkowo zawiera pole przechowujące rodzaj użytkownika (jako Enum) oraz metodę przeciążoną ToString().
+  <div class="markdown level0 remarks"><p>Dodatkowo zawiera pole przechowujące rodzaj użytkownika jako enumerator oraz metodę przeciążoną ToString.
 Posiada konstruktor dwuargumentowy na wypadek konieczności sztucznego utworzenia użytkownika.</p>
 </div>
   <h3 id="constructors">Constructors
@@ -189,8 +188,7 @@ Tworzy użytkownika z podanego loginu oraz hasła, przypisując mu z góry rodza
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Column(Name = &quot;AccountType&quot;, Storage = &quot;privileges&quot;, IsPrimaryKey = false)]
-protected Privilege privileges { set; }</code></pre>
+    <pre><code class="lang-csharp hljs">protected Privilege privileges { set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

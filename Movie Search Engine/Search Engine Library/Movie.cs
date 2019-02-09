@@ -9,18 +9,16 @@ using System.Data.Linq;
 using System.Data.Linq.Mapping;
 
 namespace Search_Engine_Library
-{
-
-    [Table(Name = "Movie")]
+{   
     /// <summary>
     /// Klasa Movie
-    /// Zawiera pola odpowiedzialne za dane dotyczące filmów w aplikacji (ID, Tytuł, Cena, Data Wydania, Gatunek, Język, Czas trwania oraz Plakat)
+    /// Zawiera pola odpowiedzialne za dane dotyczące filmów w aplikacji.
     /// </summary>
     /// <remarks>
-    /// Zawiera implementacje interfejsów IComparable<T> oraz IEquatable<T> w celu porównywania i sortowania filmów.
+    /// Zawiera implementacje interfejsów IComparable oraz IEquatable w celu porównywania i sortowania filmów.
     /// W związku z integracją aplikacji z bazą danych, to ona odpowiada za sprawdzenie, czy nie występują powtórzenia.
     /// Porównywanie jest jednak wykorzystywane w celu wyświetlania filmów w kolejności w interfejsie graficznym.
-    /// Zawiera również przeciążoną metodą ToString();
+    /// Zawiera również przeciążoną metodą ToString;
     /// </remarks>
     public class Movie : IComparable<Movie>, IEquatable<Movie>
     {
@@ -38,7 +36,7 @@ namespace Search_Engine_Library
         }
 
         private int id;
-        [Column(Name = "MovieID", Storage ="id", IsPrimaryKey = true)]
+       
         public int Id
         {
             get
@@ -52,7 +50,7 @@ namespace Search_Engine_Library
         }
 
         private string title;
-        [Column(Name = "Title", Storage = "title", CanBeNull = false)]
+       
         public string Title
         {
             get
@@ -66,7 +64,7 @@ namespace Search_Engine_Library
         }
         
         private string price;
-        [Column(Name = "Price", Storage = "price", CanBeNull = true)]
+     
         public string Price
         {
             get
@@ -80,7 +78,7 @@ namespace Search_Engine_Library
         }
 
         private DateTime releasedate;
-        [Column(Name = "ReleaseDate", Storage = "releasedate", CanBeNull = true)]
+     
         public DateTime Releasedate
         {
             get
@@ -94,7 +92,7 @@ namespace Search_Engine_Library
         }
 
         private Genre genre;
-        [Column(Name = "Genre", Storage = "genre", CanBeNull = true)]
+    
         public Genre Genre
         {
             get
@@ -108,7 +106,7 @@ namespace Search_Engine_Library
         }
 
         private Language language;
-        [Column(Name = "Language", Storage = "language", CanBeNull = true)]
+   
         public Language Language
         {
             get
@@ -122,7 +120,7 @@ namespace Search_Engine_Library
         }
 
         private string runtime;
-        [Column(Name = "Runtime", Storage = "runtime", CanBeNull = true)]
+      
         public string Runtime
         {
             get
@@ -135,7 +133,7 @@ namespace Search_Engine_Library
             }
         }
         private byte[] poster;
-        [Column(Name = "Poster", Storage = "poster", CanBeNull = true)]
+ 
         public byte[] Poster
         {
             get

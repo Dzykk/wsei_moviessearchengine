@@ -73,7 +73,9 @@
   
   <h1 id="Search_Engine_Library_Account" data-uid="Search_Engine_Library.Account" class="text-break">Class Account
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Klasa Abstrakcyjna Account
+Zawiera pola odpowiedzialne za dane użytkowników aplikacji.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -111,9 +113,12 @@
   <h6><strong>Assembly</strong>: Search Engine Library.dll</h6>
   <h5 id="Search_Engine_Library_Account_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Table(Name = &quot;Account&quot;)]
-public abstract class Account : IComparable&lt;Account&gt;, IEquatable&lt;Account&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class Account : IComparable&lt;Account&gt;, IEquatable&lt;Account&gt;</code></pre>
   </div>
+  <h5 id="Search_Engine_Library_Account_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Zawiera implementacje interfejsów IComparable oraz IEquatable w celu porównywania ze sobą użytkowników.
+W związku z integracją aplikacji z bazą danych, wszelkie dane pobierane są z bazy, a jej budowa odpowiada za brak powtórzeń i sortowanie.</p>
+</div>
   <h3 id="fields">Fields
   </h3>
   
@@ -150,8 +155,7 @@ public abstract class Account : IComparable&lt;Account&gt;, IEquatable&lt;Accoun
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Column(Name = &quot;Login&quot;, Storage = &quot;login&quot;, IsPrimaryKey = false)]
-public string Login { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Login { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -176,8 +180,7 @@ public string Login { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Column(Name = &quot;Password&quot;, Storage = &quot;password&quot;, IsPrimaryKey = false)]
-protected string password { set; }</code></pre>
+    <pre><code class="lang-csharp hljs">protected string password { set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

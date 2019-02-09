@@ -92,8 +92,8 @@ namespace Search_Engine_Library
         ).ToList();   
         
         /// <summary>
-        /// Metoda ParseEnum<T>
-        /// Służy do przekonwertowywania wartości (np. string) na odpowiadającą im wartość Enumeratora. Używana przy dodawaniu filmów do MovieList.
+        /// Metoda ParseEnum
+        /// Służy do przekonwertowywania wartości na odpowiadającą im wartość Enumeratora. Używana przy dodawaniu filmów do MovieList.
         /// </summary>
         /// <param name="value">Wartość enumeratora, w formacie string</param>
         /// <returns>Enumerator odpowiedniego typu.</returns>
